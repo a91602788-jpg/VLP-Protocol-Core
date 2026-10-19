@@ -1,0 +1,1320 @@
+{
+  "title": "VLP: каталог OSS-кандидатов и протокольных ориентиров",
+  "research_date": "2026-10-19",
+  "repository": "https://github.com/a91602788-jpg/VLP-Protocol-Core",
+  "research_gate": "NOT_EVALUATED",
+  "implementation_approval": "SEPARATE_REQUIRED",
+  "adoption_policy": "NOT_ADOPTED для каждого кандидата. До внедрения нужны license/compatibility, maintenance/security и target-platform reviews, выбор проверенного release/revision и отдельное разрешение реализации.",
+  "scope": "Документальное исследование; зависимости, runtime code, vendor snapshots, lockfile и SBOM не создавались.",
+  "revision_semantics": "Observed upstream commit — воспроизводимая ссылка на изученный материал, не pinned dependency и не выбор релиза для выполнения.",
+  "verification_method": [
+    "GitHub plugin: repository metadata → observed default branch commit → root/component listing and files by exact commit SHA.",
+    "Лицензии взяты из перечисленных actual LICENSE/manifest, а не из search snippets либо одного GitHub license badge.",
+    "README/manifest используются для определения области компонента; заявленная upstream безопасность не переобъявляется проверенной.",
+    "Полный транзитивный граф, release signatures, advisories, runtime compatibility и build behavior не проверялись."
+  ],
+  "protocol_baselines": [
+    {
+      "id": "BASE-001",
+      "name": "Noise Protocol Framework",
+      "url": "https://noiseprotocol.org/noise.html",
+      "observed_revision": "Revision 34, 2018-07-11; страница обозначена official/unstable",
+      "role": "Сравнение authenticated key exchange и transcript binding. Framework не задаёт весь UDP transport VLP.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-002",
+      "name": "RFC 8446 — TLS 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "observed_revision": "RFC 8446",
+      "role": "Контрольный стандарт handshake, key schedule, certificate authentication и ограничений early data.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-003",
+      "name": "RFC 9147 — DTLS 1.3",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9147",
+      "observed_revision": "RFC 9147",
+      "role": "Контрольный защищённый datagram channel: record epochs, replay handling и handshake retransmission.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-004",
+      "name": "RFC 9000 — QUIC Transport",
+      "url": "https://www.rfc-editor.org/rfc/rfc9000",
+      "observed_revision": "RFC 9000",
+      "role": "Сравнение packet numbers, streams, connection migration, path validation и ограничения amplification.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-005",
+      "name": "RFC 9001 — Using TLS to Secure QUIC",
+      "url": "https://datatracker.ietf.org/doc/html/rfc9001",
+      "observed_revision": "RFC 9001",
+      "role": "Изучение отдельной TLS/QUIC интеграции; это не готовая схема TLS records поверх произвольного UDP.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-006",
+      "name": "RFC 9002 — QUIC Loss Detection and Congestion Control",
+      "url": "https://www.rfc-editor.org/rfc/rfc9002",
+      "observed_revision": "RFC 9002",
+      "role": "Baseline recovery, RTT/PTO, congestion control и различения packet retransmission от логической доставки.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-007",
+      "name": "RFC 9221 — QUIC DATAGRAM",
+      "url": "https://www.rfc-editor.org/rfc/rfc9221",
+      "observed_revision": "RFC 9221",
+      "role": "Сравнение ненадёжных сообщений с QUIC streams для carrier; смысл reliability должен задаваться явно.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-008",
+      "name": "RFC 8445 — ICE",
+      "url": "https://www.rfc-editor.org/rfc/rfc8445",
+      "observed_revision": "RFC 8445",
+      "role": "Ориентир NAT traversal для возможного отдельного P2P-сценария; P2P не утверждён как обязательная функция VLP.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-009",
+      "name": "RFC 8489 — STUN",
+      "url": "https://www.rfc-editor.org/rfc/rfc8489",
+      "observed_revision": "RFC 8489",
+      "role": "Ориентир STUN transaction processing; не замена data plane и его аутентификации.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-010",
+      "name": "RFC 8656 — TURN",
+      "url": "https://www.rfc-editor.org/rfc/rfc8656",
+      "observed_revision": "RFC 8656",
+      "role": "Ориентир relay allocation, permission и lifetime при принятии relay-сценария.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-011",
+      "name": "NIST FIPS 203 — ML-KEM",
+      "url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "observed_revision": "FIPS 203, Final publication 2024-08-13; профиль VLP не задан",
+      "role": "Стандарт KEM для отдельного PQ research; наличие KEM не даёт готового authenticated hybrid handshake.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    },
+    {
+      "id": "BASE-012",
+      "name": "WireGuard — Protocol & Cryptography",
+      "url": "https://www.wireguard.com/protocol/",
+      "observed_revision": "Веб-страница наблюдалась 2026-10-19; immutable revision не предоставлена",
+      "role": "Первичный protocol reference для handshake, dataplane и сопоставления с userspace implementation.",
+      "observed_on": "2026-10-19",
+      "role_status": "REFERENCE_ONLY",
+      "adopted_as_vlp_normative_requirement": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "OSS-001",
+      "name": "snow",
+      "repository": "https://github.com/mcginty/snow",
+      "repository_full_name": "mcginty/snow",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "8ac60f51cfe3e010c84f0a454cc575ad9204fa12",
+        "commit_url": "https://github.com/mcginty/snow/commit/8ac60f51cfe3e010c84f0a454cc575ad9204fa12",
+        "commit_time": "2026-03-25T20:18:15Z",
+        "source": "https://api.github.com/repos/mcginty/snow/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "Apache-2.0 OR MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "Cargo.toml",
+            "url": "https://github.com/mcginty/snow/blob/8ac60f51cfe3e010c84f0a454cc575ad9204fa12/Cargo.toml",
+            "git_blob_sha": "a220682cdcbe27da2aebe90aea9c5c423cc9d942"
+          },
+          {
+            "path": "LICENSE-APACHE",
+            "url": "https://github.com/mcginty/snow/blob/8ac60f51cfe3e010c84f0a454cc575ad9204fa12/LICENSE-APACHE",
+            "git_blob_sha": "1f4e04bdc159a6ff27e9b0a84c5ec591fc5c7f0e"
+          },
+          {
+            "path": "LICENSE-MIT",
+            "url": "https://github.com/mcginty/snow/blob/8ac60f51cfe3e010c84f0a454cc575ad9204fa12/LICENSE-MIT",
+            "git_blob_sha": "515520d7afcf9de60d765ff55886c87fbc02b276"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Кандидат на исполнение неизменённого Noise handshake в будущем Rust-ядре; не готовый UDP-транспорт.",
+      "integration_risks": [
+        "README на наблюдаемой ревизии прямо сообщает об отсутствии формального аудита; это существенное ограничение кандидата.",
+        "Потребуются отдельная спецификация replay window, packet framing, state machine, key update и привязки negotiation к transcript.",
+        "Не включать risky-raw-split, экспериментальные PQ-возможности или дополнительные cipher suites без отдельного review.",
+        "Согласовать фактический crypto provider и его транзитивные зависимости; наличие snow не требует параллельного самостоятельного handshake из primitives."
+      ],
+      "observations": [
+        "В Cargo.toml наблюдается версия 0.10.0 и rust-version 1.85; опубликованный релиз для внедрения не выбран."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/mcginty/snow/blob/8ac60f51cfe3e010c84f0a454cc575ad9204fa12/README.md",
+          "git_blob_sha": "f473543bdbe91b18cc3c30a58ac2420ee014a1cd"
+        },
+        {
+          "path": "Cargo.toml",
+          "url": "https://github.com/mcginty/snow/blob/8ac60f51cfe3e010c84f0a454cc575ad9204fa12/Cargo.toml",
+          "git_blob_sha": "a220682cdcbe27da2aebe90aea9c5c423cc9d942"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-07-06T08:14:33Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/mcginty/snow"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-002",
+      "name": "RustCrypto AEADs: chacha20poly1305, aes-gcm",
+      "repository": "https://github.com/RustCrypto/AEADs",
+      "repository_full_name": "RustCrypto/AEADs",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "f90367cf07286ab5db652970e8268fbeab62a682",
+        "commit_url": "https://github.com/RustCrypto/AEADs/commit/f90367cf07286ab5db652970e8268fbeab62a682",
+        "commit_time": "2026-09-14T14:05:12Z",
+        "source": "https://api.github.com/repos/RustCrypto/AEADs/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "Apache-2.0 OR MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "chacha20poly1305/Cargo.toml",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/chacha20poly1305/Cargo.toml",
+            "git_blob_sha": "8e4fecd38578e9d6c45ff21f32c2cb7cf944306c"
+          },
+          {
+            "path": "chacha20poly1305/LICENSE-APACHE",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/chacha20poly1305/LICENSE-APACHE",
+            "git_blob_sha": "78173fa2e753d614bb0aa5ad125ddbbe70b282c4"
+          },
+          {
+            "path": "chacha20poly1305/LICENSE-MIT",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/chacha20poly1305/LICENSE-MIT",
+            "git_blob_sha": "f9d910e2f08624b76f81b98fba092673fb486ebb"
+          },
+          {
+            "path": "aes-gcm/Cargo.toml",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/aes-gcm/Cargo.toml",
+            "git_blob_sha": "730519dc48f01856a6fd98d3d7ce57c984f019dd"
+          },
+          {
+            "path": "aes-gcm/LICENSE-APACHE",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/aes-gcm/LICENSE-APACHE",
+            "git_blob_sha": "78173fa2e753d614bb0aa5ad125ddbbe70b282c4"
+          },
+          {
+            "path": "aes-gcm/LICENSE-MIT",
+            "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/aes-gcm/LICENSE-MIT",
+            "git_blob_sha": "f9d910e2f08624b76f81b98fba092673fb486ebb"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "AEAD primitives для обоснованного record layer либо провайдера handshake, если выбранная библиотека не закрывает этот слой.",
+      "integration_risks": [
+        "AEAD не выполняет handshake, аутентификацию устройства, replay protection и authorization самостоятельно.",
+        "Уникальность nonce, направление, generation keys, authenticated headers и лимиты использования должны быть определены в VLP.",
+        "Не складывать ChaCha20-Poly1305 и AES-GCM последовательно ради заявленного усиления; выбор cipher suite требует обоснования и аутентифицированного согласования.",
+        "Проверять конкретные crates, features, target CPU и provider; общий monorepo не является одной зависимостью."
+      ],
+      "observations": [
+        "Лицензии проверены на уровне двух component directories, поскольку общей root LICENSE в просмотренном root listing нет.",
+        "Наблюдаемые manifests: chacha20poly1305 0.11.0, aes-gcm 0.11.1; это не выбранные версии зависимостей."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/README.md",
+          "git_blob_sha": "a70315b99b437d5f6d5231790743c717e864c77e"
+        },
+        {
+          "path": "chacha20poly1305/Cargo.toml",
+          "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/chacha20poly1305/Cargo.toml",
+          "git_blob_sha": "8e4fecd38578e9d6c45ff21f32c2cb7cf944306c"
+        },
+        {
+          "path": "aes-gcm/Cargo.toml",
+          "url": "https://github.com/RustCrypto/AEADs/blob/f90367cf07286ab5db652970e8268fbeab62a682/aes-gcm/Cargo.toml",
+          "git_blob_sha": "730519dc48f01856a6fd98d3d7ce57c984f019dd"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-13T04:55:12Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/RustCrypto/AEADs"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-003",
+      "name": "RustCrypto hkdf",
+      "repository": "https://github.com/RustCrypto/KDFs",
+      "repository_full_name": "RustCrypto/KDFs",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "19a0df65a558feefed0722dd0de73ef4b966d79f",
+        "commit_url": "https://github.com/RustCrypto/KDFs/commit/19a0df65a558feefed0722dd0de73ef4b966d79f",
+        "commit_time": "2026-06-23T17:38:47Z",
+        "source": "https://api.github.com/repos/RustCrypto/KDFs/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT OR Apache-2.0",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "hkdf/Cargo.toml",
+            "url": "https://github.com/RustCrypto/KDFs/blob/19a0df65a558feefed0722dd0de73ef4b966d79f/hkdf/Cargo.toml",
+            "git_blob_sha": "5e8a3130bd93e882da3b7065d3e284e8bce06917"
+          },
+          {
+            "path": "hkdf/LICENSE-APACHE",
+            "url": "https://github.com/RustCrypto/KDFs/blob/19a0df65a558feefed0722dd0de73ef4b966d79f/hkdf/LICENSE-APACHE",
+            "git_blob_sha": "53b7ccd84d6bc60ea07a91f1fbed31b3ac8252a0"
+          },
+          {
+            "path": "hkdf/LICENSE-MIT",
+            "url": "https://github.com/RustCrypto/KDFs/blob/19a0df65a558feefed0722dd0de73ef4b966d79f/hkdf/LICENSE-MIT",
+            "git_blob_sha": "c0d07816bc2840dac35ca95a5e4df85c50a23952"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Реализация HKDF для специфицированного key schedule или отдельного исследовательского сравнения; не замена дизайну key schedule.",
+      "integration_risks": [
+        "Состав input key material, labels, salt и context должен следовать выбранной конструкции; собственное произвольное смешивание ключей не утверждено.",
+        "Не использовать HKDF вместо password hashing либо аутентифицированного обмена ключами.",
+        "Не дублировать вручную внутренний key schedule snow/rustls без необходимости и отдельного review."
+      ],
+      "observations": [
+        "Лицензия проверена в component hkdf; manifest содержит 0.13.0 и rust-version 1.85, но dependency selection не выполнен."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/RustCrypto/KDFs/blob/19a0df65a558feefed0722dd0de73ef4b966d79f/README.md",
+          "git_blob_sha": "74b7f933d8a6b8f65de86b7f8f188066086d5a50"
+        },
+        {
+          "path": "hkdf/Cargo.toml",
+          "url": "https://github.com/RustCrypto/KDFs/blob/19a0df65a558feefed0722dd0de73ef4b966d79f/hkdf/Cargo.toml",
+          "git_blob_sha": "5e8a3130bd93e882da3b7065d3e284e8bce06917"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-09-21T16:52:51Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/RustCrypto/KDFs"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-004",
+      "name": "x25519-dalek",
+      "repository": "https://github.com/dalek-cryptography/curve25519-dalek",
+      "repository_full_name": "dalek-cryptography/curve25519-dalek",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "97a020d185970839ed1d3f3a5c22aca816631786",
+        "commit_url": "https://github.com/dalek-cryptography/curve25519-dalek/commit/97a020d185970839ed1d3f3a5c22aca816631786",
+        "commit_time": "2026-09-24T14:03:36Z",
+        "source": "https://api.github.com/repos/dalek-cryptography/curve25519-dalek/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "BSD-3-Clause",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "x25519-dalek/Cargo.toml",
+            "url": "https://github.com/dalek-cryptography/curve25519-dalek/blob/97a020d185970839ed1d3f3a5c22aca816631786/x25519-dalek/Cargo.toml",
+            "git_blob_sha": "87c69366ccff27a05b9fb4f3681df24d120ce8d0"
+          },
+          {
+            "path": "x25519-dalek/LICENSE",
+            "url": "https://github.com/dalek-cryptography/curve25519-dalek/blob/97a020d185970839ed1d3f3a5c22aca816631786/x25519-dalek/LICENSE",
+            "git_blob_sha": "6577d97c240b28d24abd5cc39c5e3635a9250ed6"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "X25519 Diffie–Hellman key agreement, если выбранному провайдеру нужен этот primitive; X25519 не является цифровой подписью.",
+      "integration_risks": [
+        "Сам по себе DH не аутентифицирует удалённую сторону; требуется стандартный authenticated handshake.",
+        "Проверить генерацию ephemeral secrets, отсутствие их повторного использования, уничтожение секретов и обработку недопустимых входов согласно выбранному профилю.",
+        "Не смешивать API и лицензии x25519-dalek с соседними crates monorepo."
+      ],
+      "observations": [
+        "Актуальный изученный component расположен в monorepo curve25519-dalek/x25519-dalek.",
+        "Manifest содержит 3.0.0; эта source version не названа принятой или установленной."
+      ],
+      "technical_evidence": [
+        {
+          "path": "x25519-dalek/README.md",
+          "url": "https://github.com/dalek-cryptography/curve25519-dalek/blob/97a020d185970839ed1d3f3a5c22aca816631786/x25519-dalek/README.md",
+          "git_blob_sha": "2de75d8658fbd9a1d7662323b5d729981ec625cf"
+        },
+        {
+          "path": "x25519-dalek/Cargo.toml",
+          "url": "https://github.com/dalek-cryptography/curve25519-dalek/blob/97a020d185970839ed1d3f3a5c22aca816631786/x25519-dalek/Cargo.toml",
+          "git_blob_sha": "87c69366ccff27a05b9fb4f3681df24d120ce8d0"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-09-24T14:03:37Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/dalek-cryptography/curve25519-dalek"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-005",
+      "name": "rustls",
+      "repository": "https://github.com/rustls/rustls",
+      "repository_full_name": "rustls/rustls",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "bb2165fa87ef23fb7d12a28c086f078b4f5d412a",
+        "commit_url": "https://github.com/rustls/rustls/commit/bb2165fa87ef23fb7d12a28c086f078b4f5d412a",
+        "commit_time": "2026-10-16T15:00:52Z",
+        "source": "https://api.github.com/repos/rustls/rustls/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "Apache-2.0 OR ISC OR MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/rustls/rustls/blob/bb2165fa87ef23fb7d12a28c086f078b4f5d412a/LICENSE",
+            "git_blob_sha": "df2af4fa51df62883cc72bd5843d167893207b77"
+          },
+          {
+            "path": "rustls/Cargo.toml",
+            "url": "https://github.com/rustls/rustls/blob/bb2165fa87ef23fb7d12a28c086f078b4f5d412a/rustls/Cargo.toml",
+            "git_blob_sha": "3c1dd76c36d50c0600dd3927ccc644fe0102997b"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Кандидат на TLS для carrier / QUIC-интеграции и контрольную архитектуру с TLS 1.3.",
+      "integration_risks": [
+        "TLS record layer нельзя объявлять готовым протоколом для произвольного ненадёжного UDP; собственная интеграция требует самостоятельного анализа.",
+        "Проверить выбор crypto provider, certificate validation, trust anchors, client authentication и транзитивные лицензии.",
+        "Наблюдаемый rustls/Cargo.toml имеет version 0.24.0-dev.2; development HEAD не должен автоматически становиться runtime dependency."
+      ],
+      "observations": [
+        "Root LICENSE разрешает выбор одной из трёх перечисленных лицензий; проверена также license expression компонента."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/rustls/rustls/blob/bb2165fa87ef23fb7d12a28c086f078b4f5d412a/README.md",
+          "git_blob_sha": "ceb436c7e530516d5c02792e1f8e3a28a5b928a8"
+        },
+        {
+          "path": "Cargo.toml",
+          "url": "https://github.com/rustls/rustls/blob/bb2165fa87ef23fb7d12a28c086f078b4f5d412a/Cargo.toml",
+          "git_blob_sha": "efbf1ef651eca0dd1820fa53a7ce99f8876e853a"
+        },
+        {
+          "path": "rustls/Cargo.toml",
+          "url": "https://github.com/rustls/rustls/blob/bb2165fa87ef23fb7d12a28c086f078b4f5d412a/rustls/Cargo.toml",
+          "git_blob_sha": "3c1dd76c36d50c0600dd3927ccc644fe0102997b"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-16T15:10:56Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/rustls/rustls"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-006",
+      "name": "Quinn",
+      "repository": "https://github.com/quinn-rs/quinn",
+      "repository_full_name": "quinn-rs/quinn",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "ecc0dcfdeaec996d276da31d836f965753b66ea4",
+        "commit_url": "https://github.com/quinn-rs/quinn/commit/ecc0dcfdeaec996d276da31d836f965753b66ea4",
+        "commit_time": "2026-10-18T02:09:37Z",
+        "source": "https://api.github.com/repos/quinn-rs/quinn/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT OR Apache-2.0",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "Cargo.toml",
+            "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/Cargo.toml",
+            "git_blob_sha": "5df5d5b5453b44dd4f7a363e133e8e8698746c09"
+          },
+          {
+            "path": "quinn/Cargo.toml",
+            "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/quinn/Cargo.toml",
+            "git_blob_sha": "4f27ab99bffb78c9664816b939b9e79a7eb5b77e"
+          },
+          {
+            "path": "LICENSE-APACHE",
+            "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/LICENSE-APACHE",
+            "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+          },
+          {
+            "path": "LICENSE-MIT",
+            "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/LICENSE-MIT",
+            "git_blob_sha": "f656104056377cb81385873ec137545e5f154f17"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Кандидат на настоящий QUIC carrier и baseline benchmark; не готовое самостоятельное native UDP-ядро VLP.",
+      "integration_risks": [
+        "Определить владельца retransmission, congestion control, pacing и flow control, чтобы не получить два конфликтующих транспортных контура.",
+        "Различать QUIC streams и datagrams; нельзя обещать сохранение дейтаграммных свойств при переносе на reliable stream.",
+        "Согласовать async runtime, crypto provider и версии.",
+        "В README наблюдается MSRV 1.80.0, в workspace manifest rust-version 1.88.0: перед внедрением разрешить расхождение на конкретном релизе."
+      ],
+      "observations": [
+        "Workspace license наследуется компонентом quinn; оба manifest проверены.",
+        "Manifest quinn содержит 0.12.0; версия для внедрения не выбрана."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/README.md",
+          "git_blob_sha": "f34e42c96dcda3bd02d277dbc9ec87fdce91a0c1"
+        },
+        {
+          "path": "Cargo.toml",
+          "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/Cargo.toml",
+          "git_blob_sha": "5df5d5b5453b44dd4f7a363e133e8e8698746c09"
+        },
+        {
+          "path": "quinn/Cargo.toml",
+          "url": "https://github.com/quinn-rs/quinn/blob/ecc0dcfdeaec996d276da31d836f965753b66ea4/quinn/Cargo.toml",
+          "git_blob_sha": "4f27ab99bffb78c9664816b939b9e79a7eb5b77e"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-18T02:11:33Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/quinn-rs/quinn"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-007",
+      "name": "quiche",
+      "repository": "https://github.com/cloudflare/quiche",
+      "repository_full_name": "cloudflare/quiche",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "acf560f2e4a3d9254a1b668a50af0e114c84fe6f",
+        "commit_url": "https://github.com/cloudflare/quiche/commit/acf560f2e4a3d9254a1b668a50af0e114c84fe6f",
+        "commit_time": "2026-10-16T14:41:09Z",
+        "source": "https://api.github.com/repos/cloudflare/quiche/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "BSD-2-Clause",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "COPYING",
+            "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/COPYING",
+            "git_blob_sha": "c044775c1d9e6065434d079e852e1a4865dfdf0b"
+          },
+          {
+            "path": "Cargo.toml",
+            "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/Cargo.toml",
+            "git_blob_sha": "66db6c4cac4de5b564163a652938323d099c3f0d"
+          },
+          {
+            "path": "quiche/Cargo.toml",
+            "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/quiche/Cargo.toml",
+            "git_blob_sha": "f2cf91ea553260031009c39c51e3cd394d3f867b"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Альтернативный QUIC / HTTP/3 carrier и независимый baseline реализации.",
+      "integration_risks": [
+        "Оценить event loop и socket integration, TLS backend, native build chain, memory/resource ownership и поддержку целевых платформ.",
+        "Лицензия root COPYING не заменяет проверку включённых сторонних компонентов и выбранного TLS backend.",
+        "Не извлекать из QUIC отдельные recovery/crypto части без анализа их инвариантов."
+      ],
+      "observations": [
+        "Компонент наследует BSD-2-Clause из workspace; manifest содержит 0.30.0 и rust-version 1.88."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/README.md",
+          "git_blob_sha": "a012b1abd95171f0be75b1166febec22f2da26f3"
+        },
+        {
+          "path": "Cargo.toml",
+          "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/Cargo.toml",
+          "git_blob_sha": "66db6c4cac4de5b564163a652938323d099c3f0d"
+        },
+        {
+          "path": "quiche/Cargo.toml",
+          "url": "https://github.com/cloudflare/quiche/blob/acf560f2e4a3d9254a1b668a50af0e114c84fe6f/quiche/Cargo.toml",
+          "git_blob_sha": "f2cf91ea553260031009c39c51e3cd394d3f867b"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-16T14:43:34Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/cloudflare/quiche"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-008",
+      "name": "s2n-quic",
+      "repository": "https://github.com/aws/s2n-quic",
+      "repository_full_name": "aws/s2n-quic",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "8c1fca6a3e3861b5fc6c570e384cc454fbbde8ea",
+        "commit_url": "https://github.com/aws/s2n-quic/commit/8c1fca6a3e3861b5fc6c570e384cc454fbbde8ea",
+        "commit_time": "2026-10-16T23:00:18Z",
+        "source": "https://api.github.com/repos/aws/s2n-quic/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "Apache-2.0",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/aws/s2n-quic/blob/8c1fca6a3e3861b5fc6c570e384cc454fbbde8ea/LICENSE",
+            "git_blob_sha": "67db8588217f266eb561f75fae738656325deac9"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Альтернативная реализация QUIC для carrier и сравнения транспортного поведения.",
+      "integration_risks": [
+        "README описывает provider architecture и TLS-интеграции; для VLP нужно отдельно выбрать и проверить конкретный backend.",
+        "Размер графа зависимостей, поддержка платформ, binding/FFI и операционная сложность зависят от конфигурации.",
+        "Заявления upstream о testing/compliance не являются подтверждением безопасности VLP или независимым аудитом выбранной сборки."
+      ],
+      "observations": [
+        "Root LICENSE прочитан; transitive license inventory не выполнен."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/aws/s2n-quic/blob/8c1fca6a3e3861b5fc6c570e384cc454fbbde8ea/README.md",
+          "git_blob_sha": "cfa18ae6f8c7af5a7a284211fe97c833b06af382"
+        },
+        {
+          "path": "Cargo.toml",
+          "url": "https://github.com/aws/s2n-quic/blob/8c1fca6a3e3861b5fc6c570e384cc454fbbde8ea/Cargo.toml",
+          "git_blob_sha": "2e0f1d9f0b212833a93da3e90c0aff1a6572271b"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-17T03:36:56Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/aws/s2n-quic"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-009",
+      "name": "Pion ICE",
+      "repository": "https://github.com/pion/ice",
+      "repository_full_name": "pion/ice",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "5fdc5b169d4a06927409f01544fe38f8b3eecd3a",
+        "commit_url": "https://github.com/pion/ice/commit/5fdc5b169d4a06927409f01544fe38f8b3eecd3a",
+        "commit_time": "2026-10-16T17:43:31Z",
+        "source": "https://api.github.com/repos/pion/ice/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/pion/ice/blob/5fdc5b169d4a06927409f01544fe38f8b3eecd3a/LICENSE",
+            "git_blob_sha": "d96df053b99a68c1e01a60ee98cfbe73321a42e2"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Кандидат на отдельный Go-компонент ICE/NAT traversal либо interoperability harness при подтверждённой потребности P2P.",
+      "integration_risks": [
+        "Go library не становится непосредственной Rust dependency; выбрать границу отдельного процесса/сервиса либо иной адаптер.",
+        "Не требуется по умолчанию для обычного client → public server; необходимость P2P ещё не утверждена.",
+        "Проверить signaling authorization, candidate exposure, resource limits и поведение при смене сети."
+      ],
+      "observations": [
+        "Наблюдаемое module path github.com/pion/ice/v5; license review также должен охватить каталог LICENSES и transitive dependencies."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/pion/ice/blob/5fdc5b169d4a06927409f01544fe38f8b3eecd3a/README.md",
+          "git_blob_sha": "a1f451ef2bcc32b1df475d5e194fa57e073ff91a"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/pion/ice/blob/5fdc5b169d4a06927409f01544fe38f8b3eecd3a/go.mod",
+          "git_blob_sha": "c3d0f468583cc79227ddc5d74cce50d10856a948"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-19T03:30:24Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/pion/ice"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-010",
+      "name": "Pion STUN",
+      "repository": "https://github.com/pion/stun",
+      "repository_full_name": "pion/stun",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "d39c70b1e859fabb0e3f937e94d3c7e25fe56c1c",
+        "commit_url": "https://github.com/pion/stun/commit/d39c70b1e859fabb0e3f937e94d3c7e25fe56c1c",
+        "commit_time": "2026-10-05T06:45:03Z",
+        "source": "https://api.github.com/repos/pion/stun/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/pion/stun/blob/d39c70b1e859fabb0e3f937e94d3c7e25fe56c1c/LICENSE",
+            "git_blob_sha": "d96df053b99a68c1e01a60ee98cfbe73321a42e2"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "STUN-компонент для будущего traversal harness / отдельного Go-сервиса.",
+      "integration_risks": [
+        "STUN не заменяет relay и защищённый транспорт VLP.",
+        "Проверить transaction validation, authentication по применяемому режиму, retry budget и ограничения ответов.",
+        "Согласовать процессную границу Go/Rust; не добавлять отдельный STUN слой без утверждённого сценария."
+      ],
+      "observations": [
+        "Наблюдаемое module path github.com/pion/stun/v4; root license не завершает проверку LICENSES/transitive graph."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/pion/stun/blob/d39c70b1e859fabb0e3f937e94d3c7e25fe56c1c/README.md",
+          "git_blob_sha": "d8a75372e90f362454370663809e9ac4ed2deb25"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/pion/stun/blob/d39c70b1e859fabb0e3f937e94d3c7e25fe56c1c/go.mod",
+          "git_blob_sha": "c17a0ccc19d3d78228d83faa9f5a3f367ed86c5b"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-17T01:47:24Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/pion/stun"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-011",
+      "name": "Pion TURN",
+      "repository": "https://github.com/pion/turn",
+      "repository_full_name": "pion/turn",
+      "aliases": [],
+      "classification": "REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "b1bcca91802dffac8070b12ce0bee5bf244ffef1",
+        "commit_url": "https://github.com/pion/turn/commit/b1bcca91802dffac8070b12ce0bee5bf244ffef1",
+        "commit_time": "2026-10-05T06:41:58Z",
+        "source": "https://api.github.com/repos/pion/turn/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/pion/turn/blob/b1bcca91802dffac8070b12ce0bee5bf244ffef1/LICENSE",
+            "git_blob_sha": "d96df053b99a68c1e01a60ee98cfbe73321a42e2"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Кандидат на авторизованный relay для подтверждённых P2P-сценариев или controlled test harness.",
+      "integration_risks": [
+        "Обязательны allocation lifetime, quotas, разрешения адресов назначения и ограничения расходов на bandwidth.",
+        "Не допускать превращения relay в неограниченный публичный ретранслятор; права клиента проверяются сервером.",
+        "Go runtime и формат интеграции требуют отдельного архитектурного решения."
+      ],
+      "observations": [
+        "Наблюдаемое module path github.com/pion/turn/v5; license review должен охватить LICENSES и транзитивные модули."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/pion/turn/blob/b1bcca91802dffac8070b12ce0bee5bf244ffef1/README.md",
+          "git_blob_sha": "5b625698ff503c2b6cb6af3c2497acc16e30cc1e"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/pion/turn/blob/b1bcca91802dffac8070b12ce0bee5bf244ffef1/go.mod",
+          "git_blob_sha": "6879e9b95a53b92140557394016bd71e451dc6c0"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-13T17:11:51Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/pion/turn"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-012",
+      "name": "liboqs",
+      "repository": "https://github.com/open-quantum-safe/liboqs",
+      "repository_full_name": "open-quantum-safe/liboqs",
+      "aliases": [],
+      "classification": "EXPERIMENTAL_BENCHMARK_ONLY",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "fd44469daeffe6b28f031f54f9bb66cbae69a572",
+        "commit_url": "https://github.com/open-quantum-safe/liboqs/commit/fd44469daeffe6b28f031f54f9bb66cbae69a572",
+        "commit_time": "2026-10-08T17:43:53Z",
+        "source": "https://api.github.com/repos/open-quantum-safe/liboqs/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT (general library; component-specific exceptions)",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE.txt",
+            "url": "https://github.com/open-quantum-safe/liboqs/blob/fd44469daeffe6b28f031f54f9bb66cbae69a572/LICENSE.txt",
+            "git_blob_sha": "c08b9df5169948e5a2fa518f0a6c0bd434195cbb"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Только кандидат на изолированные измерения PQ-алгоритмов, размеров handshake и interoperability после разрешения лабораторных работ.",
+      "integration_risks": [
+        "README прямо не рекомендует опираться на библиотеку в production или для защиты sensitive data; применение в runtime VLP не предлагается.",
+        "Root LICENSE.txt предупреждает об иных лицензиях отдельных сторонних subfolders.",
+        "Нужны отдельные review hybrid construction, KEM authentication/binding, C/FFI boundary, выбранного algorithm set и параметров.",
+        "Наличие ML-KEM не доказывает безопасность всего нового handshake."
+      ],
+      "observations": [
+        "Даже experimental benchmark сейчас не запущен; только исследовательский кандидат."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/open-quantum-safe/liboqs/blob/fd44469daeffe6b28f031f54f9bb66cbae69a572/README.md",
+          "git_blob_sha": "5a680e070c61586142359fac87d5b787b0c29920"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-18T02:25:08Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/open-quantum-safe/liboqs"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-013",
+      "name": "Xray-core / VLESS reference",
+      "repository": "https://github.com/XTLS/Xray-core",
+      "repository_full_name": "XTLS/Xray-core",
+      "aliases": [],
+      "classification": "REFERENCE_ONLY",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "main",
+        "commit_sha": "92ccc939aaf4f8965f369cf0b142e005aeaa11d5",
+        "commit_url": "https://github.com/XTLS/Xray-core/commit/92ccc939aaf4f8965f369cf0b142e005aeaa11d5",
+        "commit_time": "2026-10-17T15:23:56Z",
+        "source": "https://api.github.com/repos/XTLS/Xray-core/branches/main",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MPL-2.0",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/XTLS/Xray-core/blob/92ccc939aaf4f8965f369cf0b142e005aeaa11d5/LICENSE",
+            "git_blob_sha": "a612ad9813b006ce81d1ee438dd784da99a54007"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Изучение существующих proxy/transport boundaries, VLESS и operational integration; baseline существующего продукта.",
+      "integration_risks": [
+        "Xray-core не является библиотекой нового native UDP transport VLP; большая кодовая база и Go runtime не должны переноситься целиком по умолчанию.",
+        "Повторное использование конкретного файла допускается к рассмотрению только после отдельного анализа MPL-2.0, notices, производных изменений и способа распространения.",
+        "Нельзя автоматически перелицензировать upstream code в предлагаемую для VLP Apache-2.0.",
+        "Observed go.mod содержит go 1.27; toolchain/release compatibility перед любым выполнением требует отдельной проверки."
+      ],
+      "observations": [
+        "REFERENCE_ONLY — текущее архитектурное решение каталога, а не утверждение о запрете любого reuse по MPL-2.0.",
+        "Новые функции текущего Xray нельзя выводить только из исторического описания VLESS; поведение изучать по конкретной версии."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/XTLS/Xray-core/blob/92ccc939aaf4f8965f369cf0b142e005aeaa11d5/README.md",
+          "git_blob_sha": "d52ca9bb34716dcbb39f0e656758fd98ab9c15ef"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/XTLS/Xray-core/blob/92ccc939aaf4f8965f369cf0b142e005aeaa11d5/go.mod",
+          "git_blob_sha": "e53f6e49fa3227ec102096b0990d12dc9d328879"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-19T00:20:51Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/XTLS/Xray-core"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-014",
+      "name": "Hysteria 2",
+      "repository": "https://github.com/HyNetworks/hysteria",
+      "repository_full_name": "HyNetworks/hysteria",
+      "aliases": [
+        "https://github.com/apernet/hysteria"
+      ],
+      "classification": "REFERENCE_AND_SELECTIVE_REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "ca8fbd874fd6ca82413948de6dc5924405e103e1",
+        "commit_url": "https://github.com/HyNetworks/hysteria/commit/ca8fbd874fd6ca82413948de6dc5924405e103e1",
+        "commit_time": "2026-10-05T04:00:22Z",
+        "source": "https://api.github.com/repos/HyNetworks/hysteria/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE.md",
+            "url": "https://github.com/HyNetworks/hysteria/blob/ca8fbd874fd6ca82413948de6dc5924405e103e1/LICENSE.md",
+            "git_blob_sha": "208e8f29bde3149b86884ed2faa00f819a0253ef"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Reference QUIC-based proxy; кандидат на точечное изучение и reuse отдельных компонентов после review, но не готовое самостоятельное UDP-ядро VLP.",
+      "integration_risks": [
+        "PROTOCOL.md требует QUIC RFC 9000 и DATAGRAM extension; перенос core сохраняет зависимость от архитектуры Hysteria/QUIC.",
+        "Проверить dependencies и notices по реально используемым core/extras/app компонентам; MIT в root не доказывает единый license profile всей сборки.",
+        "Маркетинговые заявления о неотличимости трафика не являются результатом независимого тестирования VLP.",
+        "Наблюдаемая source revision использует Go module paths с apernet и fork quic-go; перенос repository не равен смене module path."
+      ],
+      "observations": [
+        "Исторический https://api.github.com/repos/apernet/hysteria вернул Moved Permanently; новый canonical repository HyNetworks/hysteria подтверждён API, repository id 257434373.",
+        "core/go.mod содержит github.com/apernet/hysteria/core/v2 и go 1.26.0; выбранного release/pin нет."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/HyNetworks/hysteria/blob/ca8fbd874fd6ca82413948de6dc5924405e103e1/README.md",
+          "git_blob_sha": "ec13821fd228092e1cd98024af8b62c2781b954f"
+        },
+        {
+          "path": "PROTOCOL.md",
+          "url": "https://github.com/HyNetworks/hysteria/blob/ca8fbd874fd6ca82413948de6dc5924405e103e1/PROTOCOL.md",
+          "git_blob_sha": "835c2e9bfb9a582b5a82adb7eb595f1d4ccda050"
+        },
+        {
+          "path": "core/go.mod",
+          "url": "https://github.com/HyNetworks/hysteria/blob/ca8fbd874fd6ca82413948de6dc5924405e103e1/core/go.mod",
+          "git_blob_sha": "676cd0d2c3fa8c968b0f672cae96707d7d1f654b"
+        },
+        {
+          "path": "app/go.mod",
+          "url": "https://github.com/HyNetworks/hysteria/blob/ca8fbd874fd6ca82413948de6dc5924405e103e1/app/go.mod",
+          "git_blob_sha": "49e548c4270a48dfc90b7602dedb17372d91ae7e"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-13T18:17:44Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/HyNetworks/hysteria"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-015",
+      "name": "AmneziaWG Go",
+      "repository": "https://github.com/amnezia-vpn/amneziawg-go",
+      "repository_full_name": "amnezia-vpn/amneziawg-go",
+      "aliases": [],
+      "classification": "REFERENCE_AND_SELECTIVE_REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "b5928efb6ca19f0153958460c3d141f04abc5c2e",
+        "commit_url": "https://github.com/amnezia-vpn/amneziawg-go/commit/b5928efb6ca19f0153958460c3d141f04abc5c2e",
+        "commit_time": "2026-08-28T15:48:27Z",
+        "source": "https://api.github.com/repos/amnezia-vpn/amneziawg-go/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/amnezia-vpn/amneziawg-go/blob/b5928efb6ca19f0153958460c3d141f04abc5c2e/LICENSE",
+            "git_blob_sha": "ab45fb391a21bb6ae211e37d707999b6d843ef1e"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Изучение модификаций WireGuard-Go, packet obfuscation и userspace integration; точечный reuse возможен только как отдельное решение.",
+      "integration_risks": [
+        "Рассматривается именно amneziawg-go, а не весь Amnezia client или kernel implementation с иной лицензионной областью.",
+        "README называет upstream fork WireGuard-Go; замена внешних байтов не доказывает новизну или camouflage safety VLP.",
+        "Проверить сохранение copyright/notices, транзитивные зависимости и допустимость переноса Go/device code в выбранную архитектуру.",
+        "Обещания DPI-resistance не принимаются без воспроизводимых испытаний по собственной threat model."
+      ],
+      "observations": [
+        "Наблюдаемое module path github.com/amnezia-vpn/amneziawg-go/v3 и go 1.25.0; root LICENSE сохраняет copyright WireGuard LLC."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/amnezia-vpn/amneziawg-go/blob/b5928efb6ca19f0153958460c3d141f04abc5c2e/README.md",
+          "git_blob_sha": "84dfd3628a6fa028a004d460f4a39b09142892e9"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/amnezia-vpn/amneziawg-go/blob/b5928efb6ca19f0153958460c3d141f04abc5c2e/go.mod",
+          "git_blob_sha": "6493e57dcce2065fe9de46742dd42177fd626c94"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-09-20T08:43:42Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/amnezia-vpn/amneziawg-go"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    },
+    {
+      "id": "OSS-016",
+      "name": "wireguard-go",
+      "repository": "https://github.com/WireGuard/wireguard-go",
+      "repository_full_name": "WireGuard/wireguard-go",
+      "aliases": [],
+      "classification": "REFERENCE_AND_SELECTIVE_REUSE_CANDIDATE",
+      "adoption_status": "NOT_ADOPTED",
+      "observed_on": "2026-10-19",
+      "revision": {
+        "kind": "OBSERVED_UPSTREAM_COMMIT",
+        "branch": "master",
+        "commit_sha": "2631ce99a06f27120d581611cf125d68bc6aa565",
+        "commit_url": "https://github.com/WireGuard/wireguard-go/commit/2631ce99a06f27120d581611cf125d68bc6aa565",
+        "commit_time": "2026-10-06T16:45:05Z",
+        "source": "https://api.github.com/repos/WireGuard/wireguard-go/branches/master",
+        "is_dependency_pin": false
+      },
+      "license_observation": {
+        "expression": "MIT",
+        "scope": "Только перечисленные реально прочитанные upstream LICENSE/manifest; не юридическое заключение о всей сборке.",
+        "evidence": [
+          {
+            "path": "LICENSE",
+            "url": "https://github.com/WireGuard/wireguard-go/blob/2631ce99a06f27120d581611cf125d68bc6aa565/LICENSE",
+            "git_blob_sha": "f85e365de02a257e41b27305e74277428218ff96"
+          }
+        ],
+        "transitive_and_distribution_compatibility": "PENDING"
+      },
+      "intended_role": "Reference userspace WireGuard, ограничения системной интеграции и жизненного цикла туннеля; не универсальная библиотека собственного VLP wire format.",
+      "integration_risks": [
+        "GitHub repository обозначен как mirror; перед выбором версии сверять provenance с официальным upstream git.zx2c4.com.",
+        "Перенос handshake/device/packet частей может сохранить семантику WireGuard; новизна VLP не следует из форка.",
+        "Лицензия именно wireguard-go не переносится автоматически на kernel WireGuard, tools и платформенные модули.",
+        "Нужны review транзитивных зависимостей, системных привилегий, TUN lifecycle и целевых ОС."
+      ],
+      "observations": [
+        "Официальный upstream https://git.zx2c4.com/wireguard-go/ открыт; текущая запись фиксирует наблюдаемую GitHub mirror revision, а не подтверждённое равенство всех upstream refs.",
+        "Наблюдаемое module path golang.zx2c4.com/wireguard."
+      ],
+      "technical_evidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/WireGuard/wireguard-go/blob/2631ce99a06f27120d581611cf125d68bc6aa565/README.md",
+          "git_blob_sha": "709728d57468cac58c7c4760aac585fb62dd7d36"
+        },
+        {
+          "path": "go.mod",
+          "url": "https://github.com/WireGuard/wireguard-go/blob/2631ce99a06f27120d581611cf125d68bc6aa565/go.mod",
+          "git_blob_sha": "2a80e000144ecb33b571b65330146a092c92ce15"
+        }
+      ],
+      "maintenance_observation": {
+        "archived": false,
+        "last_repository_push": "2026-10-06T16:53:18Z",
+        "assessment": "NOT_COMPLETED",
+        "source": "https://api.github.com/repos/WireGuard/wireguard-go"
+      },
+      "security_assessment": "NOT_COMPLETED",
+      "pending_reviews": [
+        "LICENSE_AND_COMPATIBILITY_REVIEW",
+        "MAINTENANCE_REVIEW",
+        "SECURITY_REVIEW",
+        "TARGET_PLATFORM_REVIEW",
+        "RELEASE_AND_TRANSITIVE_DEPENDENCY_REVIEW"
+      ]
+    }
+  ],
+  "description_language": "ru",
+  "english_overview": "oss-candidates.md",
+  "russian_details": "oss-candidates.ru.md"
+}

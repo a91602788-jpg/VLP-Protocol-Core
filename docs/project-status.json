@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-19",
+  "project": "VLP Protocol Core",
+  "lifecycle_stage": "RESEARCH",
+  "research_gate": "NOT_EVALUATED",
+  "specification_review": "NOT_EVALUATED",
+  "implementation_approval": "NOT_RECORDED",
+  "protocol_implementation": "NOT_STARTED",
+  "assigned_wire_version": null,
+  "published_protocol_releases": [],
+  "adopted_runtime_dependencies": [],
+  "reserved_specifications": [
+    {"id": "VLP-0001", "title": "Architecture", "status": "RESERVED"},
+    {"id": "VLP-0002", "title": "Packet Wire Format", "status": "RESERVED"},
+    {"id": "VLP-0003", "title": "Handshake", "status": "RESERVED"}
+  ],
+  "candidates_not_decisions": [
+    "Native UDP transport",
+    "Protocol over an existing transport or a narrower extension",
+    "Noise-based cryptographic profile",
+    "Rust reference implementation",
+    "Joint delivery and camouflage scheduling"
+  ],
+  "requirement_count": 220,
+  "requirements": "requirements/requirements.json",
+  "decision_process": "process/decision-process.md",
+  "evidence_boundary": "Repository documentation checks are not protocol validation or a Research Gate result."
+}
