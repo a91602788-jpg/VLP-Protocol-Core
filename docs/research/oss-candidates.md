@@ -54,6 +54,8 @@ The [Russian candidate cards](oss-candidates.ru.md#карточки-кандид
 
 ## Protocol baselines
 
+**TLS reference refresh, 2026-10-19:** BASE-002 retains RFC 8446 as the originally observed TLS 1.3 reference. The current base document is [RFC 9846](https://www.rfc-editor.org/info/rfc9846/), which obsoletes it. [RFC 9954](https://www.rfc-editor.org/info/rfc9954/) is an Informational hybrid framework; [RFC 10024](https://www.rfc-editor.org/rfc/rfc10024.html) specifies TLS hybrid groups. See [endpoint security](endpoint-security.md). This update does not change any of the 16 adoption statuses or selected dependency versions.
+
 These are comparison references, **not automatically adopted normative requirements for VLP**. Referencing a standard does not settle the terms for copying its text or code components. All sources below were observed on 2026-10-19; adoption and implementation remain separate.
 
 | ID | Primary source | Observed document / revision | Research purpose |

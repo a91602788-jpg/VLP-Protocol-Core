@@ -26,6 +26,12 @@ The central hypothesis is that delivery scheduling and traffic-shaping policies 
 
 Streams, datagrams, migration, padding, and time-limited delivery are existing concepts. Combining them does not establish novelty. A native UDP transport, a protocol over an existing transport, and a narrower extension must all remain comparable until the Research Gate records the decision and evidence.
 
+## Mobile, server, and relay scenarios
+
+The [deployment proposal](docs/research/deployment-profiles.md) evaluates server-to-server, phone-to-server, phone-to-phone, and constrained-device communication. It separates the data service, route/trust profile, and carrier so their costs and guarantees can be reviewed explicitly.
+
+Direct connections, opaque transit relays, layered multi-hop routes, and asynchronous mixing are research alternatives. Performance adaptation must respect the selected authentication and privacy policy. A change in reachability is not permission to weaken that policy. See the focused notes on [mobile endpoints](docs/research/mobile-endpoints.md), [endpoint security](docs/research/endpoint-security.md), and [routing and privacy](docs/research/routing-privacy.md).
+
 ## Seven engineering cores
 
 | Core | Responsibility |

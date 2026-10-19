@@ -10,6 +10,7 @@ This roadmap describes work order, not completed milestones or a release schedul
 - Review upstream sources, licenses, integration boundaries, and maintenance evidence.
 - Define reproducible validation methods and criteria before claiming results.
 - Record reasons for selecting, deferring, or excluding each optional feature.
+- Evaluate the [server/mobile deployment scenarios](docs/research/deployment-profiles.md), including endpoint trust, route visibility, sleep/recovery, fallback and energy. Research onion, garlic, mixnet and multipath before assigning their implementation priority.
 
 **Exit:** a reviewable evidence package for the Research Gate. Current gate status: not evaluated.
 

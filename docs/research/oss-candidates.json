@@ -32,7 +32,14 @@
       "role": "Контрольный стандарт handshake, key schedule, certificate authentication и ограничений early data.",
       "observed_on": "2026-10-19",
       "role_status": "REFERENCE_ONLY",
-      "adopted_as_vlp_normative_requirement": false
+      "adopted_as_vlp_normative_requirement": false,
+      "reference_refresh": {
+        "observed_on": "2026-10-19",
+        "original_reference_scope": "HISTORICAL_TLS_1_3_BASE",
+        "current_base_reference": "https://www.rfc-editor.org/info/rfc9846/",
+        "relationship": "RFC 9846 obsoletes RFC 8446; original BASE-002 observation retained.",
+        "adopted_as_vlp_normative_requirement": false
+      }
     },
     {
       "id": "BASE-003",
@@ -1316,5 +1323,27 @@
   ],
   "description_language": "ru",
   "english_overview": "oss-candidates.md",
-  "russian_details": "oss-candidates.ru.md"
+  "russian_details": "oss-candidates.ru.md",
+  "research_updates": [
+    {
+      "date": "2026-10-19",
+      "topic": "Endpoint protection, mobile operation, route privacy and TLS reference refresh",
+      "notes": [
+        "deployment-profiles.md",
+        "endpoint-security.md",
+        "mobile-endpoints.md",
+        "routing-privacy.md"
+      ],
+      "current_tls_reference": "https://www.rfc-editor.org/info/rfc9846/",
+      "tls_hybrid_framework": {
+        "url": "https://www.rfc-editor.org/info/rfc9954/",
+        "category": "INFORMATIONAL"
+      },
+      "tls_hybrid_groups": {
+        "url": "https://www.rfc-editor.org/rfc/rfc10024.html",
+        "category": "STANDARDS_TRACK"
+      },
+      "adoption_status_unchanged": true
+    }
+  ]
 }

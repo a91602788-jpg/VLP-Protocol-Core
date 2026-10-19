@@ -8,6 +8,8 @@ The complete scope is the [220-item requirements register](../requirements/READM
 
 VLP has exactly seven engineering cores: **Protocol Core, Transport, Cryptography, Handshake, Camouflage, Data Plane, and Security**. Control, privacy, performance, connection lifecycle, reliability, evolution, and validation cut across them.
 
+The [deployment research](../research/deployment-profiles.md) applies these boundaries to server, phone, relay and constrained-device scenarios. It separates data-service semantics, route/trust choices, and carrier mappings; none is an additional engineering core or an adopted wire profile.
+
 ## Responsibility map
 
 | Core | Owns the engineering questions | Boundary with other cores | Expected research output |

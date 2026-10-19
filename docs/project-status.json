@@ -20,7 +20,17 @@
     "Protocol over an existing transport or a narrower extension",
     "Noise-based cryptographic profile",
     "Rust reference implementation",
-    "Joint delivery and camouflage scheduling"
+    "Joint delivery and camouflage scheduling",
+    "Separate data-service, route/trust, and carrier profiles",
+    "Mobile failover and optional multipath",
+    "Layered routing and asynchronous mixing",
+    "TLS 1.3 and hybrid ECDHE/ML-KEM research profiles"
+  ],
+  "research_notes": [
+    "research/deployment-profiles.md",
+    "research/mobile-endpoints.md",
+    "research/endpoint-security.md",
+    "research/routing-privacy.md"
   ],
   "requirement_count": 220,
   "requirements": "requirements/requirements.json",
