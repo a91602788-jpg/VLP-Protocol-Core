@@ -1,0 +1,5043 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-19",
+  "source": "Owner-provided 220-topic list supplied in the VLP project conversation on 2026-10-19.",
+  "source_language": "ru",
+  "translation_note": "English titles are a convenience translation. The original Russian title is preserved; clarification does not silently rewrite it.",
+  "status_note": "These are research and design topics, not 220 approved normative requirements or implemented features.",
+  "closure_rule": "Resolution requires a reviewed decision reference, evidence, scope/disposition, specification coverage, and remaining risks. Deferred or excluded features remain in the register with reasons. No record is resolved by this foundation change.",
+  "engineering_cores": [
+    {
+      "id": "PROTOCOL_CORE",
+      "number": "01",
+      "name": "Protocol Core"
+    },
+    {
+      "id": "TRANSPORT",
+      "number": "02",
+      "name": "Transport"
+    },
+    {
+      "id": "CRYPTOGRAPHY",
+      "number": "03",
+      "name": "Cryptography"
+    },
+    {
+      "id": "HANDSHAKE",
+      "number": "04",
+      "name": "Handshake"
+    },
+    {
+      "id": "CAMOUFLAGE",
+      "number": "05",
+      "name": "Camouflage"
+    },
+    {
+      "id": "DATA_PLANE",
+      "number": "06",
+      "name": "Data Plane"
+    },
+    {
+      "id": "SECURITY",
+      "number": "07",
+      "name": "Security"
+    }
+  ],
+  "planning_tracks": [
+    {
+      "id": "FOUNDATION_RESEARCH",
+      "short": "R",
+      "meaning": "Research a required design topic; no design or implementation is approved."
+    },
+    {
+      "id": "SCOPE_DECISION",
+      "short": "D",
+      "meaning": "Evaluate alternatives or optional capabilities and record the scope decision."
+    },
+    {
+      "id": "IMPLEMENTATION_CONSIDERATION",
+      "short": "I",
+      "meaning": "Specify the property now; implementation work remains behind its approval gate."
+    },
+    {
+      "id": "VALIDATION_WORK",
+      "short": "V",
+      "meaning": "Plan evidence now; execute only at the authorized stage and record actual results."
+    },
+    {
+      "id": "SPECIFICATION_DELIVERABLE",
+      "short": "S",
+      "meaning": "Track document coverage; formal specifications follow the Research Gate."
+    }
+  ],
+  "source_categories": [
+    {
+      "id": "TOPIC-01",
+      "title_en": "Architecture",
+      "title_ru": "Архитектура протокола (Core)",
+      "first": 1,
+      "last": 12
+    },
+    {
+      "id": "TOPIC-02",
+      "title_en": "Transport Layer",
+      "title_ru": "Transport Layer — транспорт",
+      "first": 13,
+      "last": 30
+    },
+    {
+      "id": "TOPIC-03",
+      "title_en": "Cryptography",
+      "title_ru": "Cryptography — шифрование",
+      "first": 31,
+      "last": 52
+    },
+    {
+      "id": "TOPIC-04",
+      "title_en": "Handshake",
+      "title_ru": "Handshake — установка соединения",
+      "first": 53,
+      "last": 68
+    },
+    {
+      "id": "TOPIC-05",
+      "title_en": "Camouflage",
+      "title_ru": "Camouflage — маскировка",
+      "first": 69,
+      "last": 87
+    },
+    {
+      "id": "TOPIC-06",
+      "title_en": "Data Plane",
+      "title_ru": "Data Plane — передача данных",
+      "first": 88,
+      "last": 104
+    },
+    {
+      "id": "TOPIC-07",
+      "title_en": "Security",
+      "title_ru": "Security — защита протокола",
+      "first": 105,
+      "last": 125
+    },
+    {
+      "id": "TOPIC-08",
+      "title_en": "Privacy",
+      "title_ru": "Privacy — конфиденциальность",
+      "first": 126,
+      "last": 136
+    },
+    {
+      "id": "TOPIC-09",
+      "title_en": "Connection Management",
+      "title_ru": "Connection Management — управление соединением",
+      "first": 137,
+      "last": 148
+    },
+    {
+      "id": "TOPIC-10",
+      "title_en": "Performance",
+      "title_ru": "Performance — производительность",
+      "first": 149,
+      "last": 162
+    },
+    {
+      "id": "TOPIC-11",
+      "title_en": "Protocol Evolution",
+      "title_ru": "Protocol Evolution — развитие",
+      "first": 163,
+      "last": 173
+    },
+    {
+      "id": "TOPIC-12",
+      "title_en": "Reliability",
+      "title_ru": "Reliability — устойчивость",
+      "first": 174,
+      "last": 184
+    },
+    {
+      "id": "TOPIC-13",
+      "title_en": "Protocol Validation",
+      "title_ru": "Protocol Validation — проверка протокола",
+      "first": 185,
+      "last": 200
+    },
+    {
+      "id": "TOPIC-14",
+      "title_en": "Specification",
+      "title_ru": "Specification — документация нового протокола",
+      "first": 201,
+      "last": 220
+    }
+  ],
+  "records": [
+    {
+      "id": "VLP-REQ-001",
+      "source_number": 1,
+      "original_title_ru": "Назначение протокола и сценарии использования.",
+      "title_en": "Protocol purpose and use cases.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-002",
+      "source_number": 2,
+      "original_title_ru": "Самостоятельный протокол или расширение существующего транспорта.",
+      "title_en": "Independent protocol or extension of an existing transport.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A protocol over QUIC can still be a distinct protocol. A native UDP transport adds responsibilities and needs a recorded justification."
+    },
+    {
+      "id": "VLP-REQ-003",
+      "source_number": 3,
+      "original_title_ru": "Модель взаимодействия клиент — сервер — узел — узел.",
+      "title_en": "Client-server and node-to-node interaction model.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Define roles, trust boundaries, relays, and key-termination endpoints; node-to-node interaction is not automatically a P2P topology."
+    },
+    {
+      "id": "VLP-REQ-004",
+      "source_number": 4,
+      "original_title_ru": "Одноранговые (P2P) соединения.",
+      "title_en": "Peer-to-peer connections.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "P2P is a scope candidate; discovery, admission, NAT traversal, relay fallback, and peer privacy need a joint decision."
+    },
+    {
+      "id": "VLP-REQ-005",
+      "source_number": 5,
+      "original_title_ru": "Архитектура Control Plane и Data Plane.",
+      "title_en": "Control Plane and Data Plane architecture.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-006",
+      "source_number": 6,
+      "original_title_ru": "Машина состояний соединения.",
+      "title_en": "Connection state machine.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-172",
+        "VLP-REQ-190",
+        "VLP-REQ-211"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-007",
+      "source_number": 7,
+      "original_title_ru": "Формат пакетов (Wire Format).",
+      "title_en": "Packet wire format.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-088",
+        "VLP-REQ-094",
+        "VLP-REQ-163",
+        "VLP-REQ-189",
+        "VLP-REQ-204"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-008",
+      "source_number": 8,
+      "original_title_ru": "Типы сообщений и их назначение.",
+      "title_en": "Message types and their purpose.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-093",
+        "VLP-REQ-166",
+        "VLP-REQ-170",
+        "VLP-REQ-171"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-009",
+      "source_number": 9,
+      "original_title_ru": "Управление сессиями.",
+      "title_en": "Session management.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-064",
+        "VLP-REQ-125",
+        "VLP-REQ-139",
+        "VLP-REQ-140"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-010",
+      "source_number": 10,
+      "original_title_ru": "Версионирование протокола.",
+      "title_en": "Protocol versioning.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-011",
+        "VLP-REQ-163",
+        "VLP-REQ-164"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-011",
+      "source_number": 11,
+      "original_title_ru": "Расширяемость и совместимость версий.",
+      "title_en": "Extensibility and version compatibility.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-010",
+        "VLP-REQ-163",
+        "VLP-REQ-164"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-012",
+      "source_number": 12,
+      "original_title_ru": "Согласование возможностей сторон.",
+      "title_en": "Peer capability negotiation.",
+      "source_category": "TOPIC-01",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-058",
+        "VLP-REQ-059",
+        "VLP-REQ-167",
+        "VLP-REQ-214"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-013",
+      "source_number": 13,
+      "original_title_ru": "Передача поверх UDP.",
+      "title_en": "Transport over UDP.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-014",
+      "source_number": 14,
+      "original_title_ru": "Передача поверх TCP.",
+      "title_en": "Transport over TCP.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "TCP carriage requires an explicit mapping of stream/datagram semantics and a review of head-of-line blocking and fallback policy."
+    },
+    {
+      "id": "VLP-REQ-015",
+      "source_number": 15,
+      "original_title_ru": "Собственный механизм надёжной доставки поверх UDP.",
+      "title_en": "A protocol-specific reliable-delivery mechanism over UDP.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "If an existing reliable carrier is selected, justify any additional reliability layer instead of duplicating it automatically."
+    },
+    {
+      "id": "VLP-REQ-016",
+      "source_number": 16,
+      "original_title_ru": "Поддержка потоков (Streams).",
+      "title_en": "Stream support.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-017",
+      "source_number": 17,
+      "original_title_ru": "Поддержка датаграмм (Datagrams).",
+      "title_en": "Datagram support.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-018",
+      "source_number": 18,
+      "original_title_ru": "Мультиплексирование соединений.",
+      "title_en": "Connection multiplexing.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Distinguish multiplexed application channels from separate transport connections; ownership and limits must remain explicit."
+    },
+    {
+      "id": "VLP-REQ-019",
+      "source_number": 19,
+      "original_title_ru": "Управление потоком (Flow Control).",
+      "title_en": "Flow control.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-100",
+        "VLP-REQ-101",
+        "VLP-REQ-181",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-020",
+      "source_number": 20,
+      "original_title_ru": "Управление перегрузкой (Congestion Control).",
+      "title_en": "Congestion control.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-030",
+        "VLP-REQ-087",
+        "VLP-REQ-160",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-021",
+      "source_number": 21,
+      "original_title_ru": "Повторная передача потерянных пакетов.",
+      "title_en": "Retransmission of lost packets.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-023",
+        "VLP-REQ-096",
+        "VLP-REQ-174",
+        "VLP-REQ-180"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "The original wording is preserved. Resending a cached, byte-identical encoded packet is distinct from encrypting a new packet. A new AEAD encryption must satisfy the selected construction's nonce-uniqueness rules, even when the plaintext is unchanged; changing authenticated headers does not permit reuse of the same key/nonce pair. Specify how retransmitted logical data receives fresh packet numbers and nonces."
+    },
+    {
+      "id": "VLP-REQ-022",
+      "source_number": 22,
+      "original_title_ru": "Контроль порядка доставки.",
+      "title_en": "Delivery ordering.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-110",
+        "VLP-REQ-176"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-023",
+      "source_number": 23,
+      "original_title_ru": "Обнаружение потерь.",
+      "title_en": "Loss detection.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-021",
+        "VLP-REQ-096",
+        "VLP-REQ-174",
+        "VLP-REQ-180"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-024",
+      "source_number": 24,
+      "original_title_ru": "Управление MTU и размером пакетов.",
+      "title_en": "MTU and packet-size management.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-025",
+        "VLP-REQ-150"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-025",
+      "source_number": 25,
+      "original_title_ru": "Фрагментация и сборка данных.",
+      "title_en": "Data fragmentation and reassembly.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-024",
+        "VLP-REQ-150"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Bound fragment count, total reassembly memory, lifetime, and pre-authentication work. Decide whether fragmentation is required for the selected IP profile."
+    },
+    {
+      "id": "VLP-REQ-026",
+      "source_number": 26,
+      "original_title_ru": "Миграция соединения между сетями.",
+      "title_en": "Connection migration between networks.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-143",
+        "VLP-REQ-144",
+        "VLP-REQ-145"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-027",
+      "source_number": 27,
+      "original_title_ru": "NAT Traversal.",
+      "title_en": "NAT traversal.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "NAT rebinding, hole punching, ICE-style traversal, discovery, and relays are different mechanisms; select only the applicable ones."
+    },
+    {
+      "id": "VLP-REQ-028",
+      "source_number": 28,
+      "original_title_ru": "Multipath — несколько сетевых путей.",
+      "title_en": "Multipath support.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Separate migration with one active path from simultaneous multipath; review congestion fairness and packet-number/key contexts."
+    },
+    {
+      "id": "VLP-REQ-029",
+      "source_number": 29,
+      "original_title_ru": "Keepalive и определение доступности.",
+      "title_en": "Keepalive and reachability detection.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-141",
+        "VLP-REQ-142"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-030",
+      "source_number": 30,
+      "original_title_ru": "Управление задержками, джиттером и пропускной способностью.",
+      "title_en": "Latency, jitter, and bandwidth management.",
+      "source_category": "TOPIC-02",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-020",
+        "VLP-REQ-087",
+        "VLP-REQ-160",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-031",
+      "source_number": 31,
+      "original_title_ru": "Модель криптографической защиты.",
+      "title_en": "Cryptographic protection model.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-105",
+        "VLP-REQ-186",
+        "VLP-REQ-202",
+        "VLP-REQ-205"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-032",
+      "source_number": 32,
+      "original_title_ru": "Выбор проверенных криптографических алгоритмов.",
+      "title_en": "Selection of established cryptographic algorithms.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-033",
+      "source_number": 33,
+      "original_title_ru": "Симметричное шифрование.",
+      "title_en": "Symmetric encryption.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-034",
+      "source_number": 34,
+      "original_title_ru": "Асимметричная криптография.",
+      "title_en": "Asymmetric cryptography.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-035",
+      "source_number": 35,
+      "original_title_ru": "AEAD — шифрование с проверкой подлинности.",
+      "title_en": "Authenticated encryption with associated data.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-036",
+      "source_number": 36,
+      "original_title_ru": "Обмен ключами (Key Exchange).",
+      "title_en": "Key exchange.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-037",
+        "VLP-REQ-041",
+        "VLP-REQ-042"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-037",
+      "source_number": 37,
+      "original_title_ru": "ECDH / ECDHE.",
+      "title_en": "ECDH and ECDHE.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-036",
+        "VLP-REQ-041",
+        "VLP-REQ-042"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-038",
+      "source_number": 38,
+      "original_title_ru": "HKDF и получение производных ключей.",
+      "title_en": "HKDF and key derivation.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-048"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-039",
+      "source_number": 39,
+      "original_title_ru": "Forward Secrecy.",
+      "title_en": "Forward secrecy.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-040",
+        "VLP-REQ-043"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "State whose compromise is considered, when it occurs, which data is protected, and which secrets must have been erased."
+    },
+    {
+      "id": "VLP-REQ-040",
+      "source_number": 40,
+      "original_title_ru": "Post-Compromise Security — восстановление защищённости после компрометации.",
+      "title_en": "Post-compromise security.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-039",
+        "VLP-REQ-043"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A one-way update derived from a compromised traffic secret does not by itself restore secrecy. Specify attacker access, fresh secret contributions, and identity-key recovery."
+    },
+    {
+      "id": "VLP-REQ-041",
+      "source_number": 41,
+      "original_title_ru": "Post-Quantum Cryptography.",
+      "title_en": "Post-quantum cryptography.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-036",
+        "VLP-REQ-037",
+        "VLP-REQ-042"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A post-quantum primitive does not imply an authenticated post-quantum protocol. Evaluate the complete profile and its threat assumptions."
+    },
+    {
+      "id": "VLP-REQ-042",
+      "source_number": 42,
+      "original_title_ru": "Гибридный классический и постквантовый обмен ключами.",
+      "title_en": "Hybrid classical and post-quantum key exchange.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-036",
+        "VLP-REQ-037",
+        "VLP-REQ-041"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Review the exact hybrid construction, transcript binding, identity authentication, confirmation, size, and fragmentation requirements."
+    },
+    {
+      "id": "VLP-REQ-043",
+      "source_number": 43,
+      "original_title_ru": "Ротация ключей (Key Rotation).",
+      "title_en": "Key rotation.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-039",
+        "VLP-REQ-040"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-044",
+      "source_number": 44,
+      "original_title_ru": "Разделение ключей по направлениям передачи.",
+      "title_en": "Directional key separation.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-045",
+        "VLP-REQ-046",
+        "VLP-REQ-091",
+        "VLP-REQ-122"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-045",
+      "source_number": 45,
+      "original_title_ru": "Управление Nonce и IV.",
+      "title_en": "Nonce and IV management.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-044",
+        "VLP-REQ-046",
+        "VLP-REQ-091",
+        "VLP-REQ-122"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Nonce namespaces must account for directions, generations, retries, paths, restarts, and snapshot restoration."
+    },
+    {
+      "id": "VLP-REQ-046",
+      "source_number": 46,
+      "original_title_ru": "Защита от повторного использования Nonce.",
+      "title_en": "Nonce-reuse prevention.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-044",
+        "VLP-REQ-045",
+        "VLP-REQ-091",
+        "VLP-REQ-122"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "No network failure, migration, or restored snapshot may silently reset a counter under a reused key."
+    },
+    {
+      "id": "VLP-REQ-047",
+      "source_number": 47,
+      "original_title_ru": "Криптографическая случайность.",
+      "title_en": "Cryptographic randomness.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-048",
+      "source_number": 48,
+      "original_title_ru": "Domain Separation.",
+      "title_en": "Domain separation.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-038"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-049",
+      "source_number": 49,
+      "original_title_ru": "Шифрование полезной нагрузки.",
+      "title_en": "Payload encryption.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-050",
+        "VLP-REQ-051",
+        "VLP-REQ-095",
+        "VLP-REQ-109"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-050",
+      "source_number": 50,
+      "original_title_ru": "Защита метаданных и заголовков.",
+      "title_en": "Metadata and header protection.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-049",
+        "VLP-REQ-051",
+        "VLP-REQ-095",
+        "VLP-REQ-109"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-051",
+      "source_number": 51,
+      "original_title_ru": "Контроль целостности сообщений.",
+      "title_en": "Message integrity.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-049",
+        "VLP-REQ-050",
+        "VLP-REQ-095",
+        "VLP-REQ-109"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-052",
+      "source_number": 52,
+      "original_title_ru": "Безопасное уничтожение ключевого материала.",
+      "title_en": "Secure destruction of key material.",
+      "source_category": "TOPIC-03",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Specify implementation and platform limits; do not promise universal erasure of registers, copies, swap, or crash dumps."
+    },
+    {
+      "id": "VLP-REQ-053",
+      "source_number": 53,
+      "original_title_ru": "Собственный протокол рукопожатия.",
+      "title_en": "Protocol-specific handshake.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-065",
+        "VLP-REQ-068",
+        "VLP-REQ-137",
+        "VLP-REQ-149",
+        "VLP-REQ-188",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A protocol-specific handshake specification may integrate an existing reviewed construction; this is not a requirement to invent new cryptography."
+    },
+    {
+      "id": "VLP-REQ-054",
+      "source_number": 54,
+      "original_title_ru": "Взаимная аутентификация сторон.",
+      "title_en": "Mutual authentication.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-055",
+        "VLP-REQ-056",
+        "VLP-REQ-057",
+        "VLP-REQ-067",
+        "VLP-REQ-138",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Record whether mutual authentication is mandatory for the initial use case, rather than assuming that every optional mode is equivalent."
+    },
+    {
+      "id": "VLP-REQ-055",
+      "source_number": 55,
+      "original_title_ru": "Подтверждение владения ключами.",
+      "title_en": "Proof of key possession.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-056",
+        "VLP-REQ-057",
+        "VLP-REQ-067",
+        "VLP-REQ-138",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-056",
+      "source_number": 56,
+      "original_title_ru": "Односторонняя и двусторонняя аутентификация.",
+      "title_en": "One-way and mutual authentication modes.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-055",
+        "VLP-REQ-057",
+        "VLP-REQ-067",
+        "VLP-REQ-138",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Authentication modes are alternatives requiring explicit policy. A failed stronger mode must not silently select a weaker mode."
+    },
+    {
+      "id": "VLP-REQ-057",
+      "source_number": 57,
+      "original_title_ru": "PSK / Public Key / Certificate Authentication.",
+      "title_en": "PSK, public-key, and certificate authentication.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-055",
+        "VLP-REQ-056",
+        "VLP-REQ-067",
+        "VLP-REQ-138",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Separate PSKs, identifiers, public keys, certificates, enrollment credentials, and authorization; one mode need not support all others."
+    },
+    {
+      "id": "VLP-REQ-058",
+      "source_number": 58,
+      "original_title_ru": "Согласование криптографических алгоритмов.",
+      "title_en": "Cryptographic algorithm negotiation.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-012",
+        "VLP-REQ-059",
+        "VLP-REQ-167",
+        "VLP-REQ-214"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Keep the mandatory initial profile small and bind any negotiation to authenticated context."
+    },
+    {
+      "id": "VLP-REQ-059",
+      "source_number": 59,
+      "original_title_ru": "Защита согласования параметров от подмены.",
+      "title_en": "Integrity of parameter negotiation.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-012",
+        "VLP-REQ-058",
+        "VLP-REQ-167",
+        "VLP-REQ-214"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-060",
+      "source_number": 60,
+      "original_title_ru": "Защита от Downgrade Attack.",
+      "title_en": "Downgrade-attack resistance.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-113",
+        "VLP-REQ-168",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-061",
+      "source_number": 61,
+      "original_title_ru": "Защита от MITM.",
+      "title_en": "Man-in-the-middle resistance.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-106"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-062",
+      "source_number": 62,
+      "original_title_ru": "Защита от Replay Attack.",
+      "title_en": "Replay-attack resistance.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-063",
+        "VLP-REQ-097",
+        "VLP-REQ-107",
+        "VLP-REQ-108",
+        "VLP-REQ-175",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-063",
+      "source_number": 63,
+      "original_title_ru": "0-RTT / 1-RTT с учётом рисков повторного воспроизведения.",
+      "title_en": "0-RTT and 1-RTT with replay risks considered.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-062",
+        "VLP-REQ-097",
+        "VLP-REQ-107",
+        "VLP-REQ-108",
+        "VLP-REQ-175",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Early application data is a scope decision with replay and side-effect analysis; planning 0-RTT is not permission to enable it."
+    },
+    {
+      "id": "VLP-REQ-064",
+      "source_number": 64,
+      "original_title_ru": "Session Resumption.",
+      "title_en": "Session resumption.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-009",
+        "VLP-REQ-125",
+        "VLP-REQ-139",
+        "VLP-REQ-140"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Define ticket/key lifecycle, peer identity, replay handling, expiry, and multi-node state before introducing resumption."
+    },
+    {
+      "id": "VLP-REQ-065",
+      "source_number": 65,
+      "original_title_ru": "Защита начального обмена.",
+      "title_en": "Initial-exchange protection.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-068",
+        "VLP-REQ-137",
+        "VLP-REQ-149",
+        "VLP-REQ-188",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-066",
+      "source_number": 66,
+      "original_title_ru": "Минимизация раскрываемых данных до аутентификации.",
+      "title_en": "Minimization of pre-authentication disclosure.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-071",
+        "VLP-REQ-124",
+        "VLP-REQ-127",
+        "VLP-REQ-136"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-067",
+      "source_number": 67,
+      "original_title_ru": "Защита от подмены идентичности.",
+      "title_en": "Identity-impersonation resistance.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-055",
+        "VLP-REQ-056",
+        "VLP-REQ-057",
+        "VLP-REQ-138",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-068",
+      "source_number": 68,
+      "original_title_ru": "Тайм-ауты и безопасное завершение Handshake.",
+      "title_en": "Handshake timeouts and safe termination.",
+      "source_category": "TOPIC-04",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-065",
+        "VLP-REQ-137",
+        "VLP-REQ-149",
+        "VLP-REQ-188",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-069",
+      "source_number": 69,
+      "original_title_ru": "Маскировка структуры сетевого трафика.",
+      "title_en": "Traffic-structure camouflage.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-070",
+      "source_number": 70,
+      "original_title_ru": "Обфускация пакетов.",
+      "title_en": "Packet obfuscation.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Obfuscation is not payload confidentiality, authentication, or evidence of indistinguishability."
+    },
+    {
+      "id": "VLP-REQ-071",
+      "source_number": 71,
+      "original_title_ru": "Маскировка Handshake.",
+      "title_en": "Handshake camouflage.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-066",
+        "VLP-REQ-124",
+        "VLP-REQ-127",
+        "VLP-REQ-136"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-072",
+      "source_number": 72,
+      "original_title_ru": "Сокрытие характерных сигнатур протокола.",
+      "title_en": "Reduction of characteristic protocol signatures.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-073",
+      "source_number": 73,
+      "original_title_ru": "Уменьшение распознаваемости по размерам пакетов.",
+      "title_en": "Reduction of packet-size fingerprinting.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-074",
+      "source_number": 74,
+      "original_title_ru": "Packet Padding.",
+      "title_en": "Packet padding.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-075",
+      "source_number": 75,
+      "original_title_ru": "Адаптивный Padding.",
+      "title_en": "Adaptive padding.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-076",
+      "source_number": 76,
+      "original_title_ru": "Traffic Shaping.",
+      "title_en": "Traffic shaping.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-077",
+      "source_number": 77,
+      "original_title_ru": "Маскировка временных характеристик передачи.",
+      "title_en": "Camouflage of transmission timing.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-078",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-078",
+      "source_number": 78,
+      "original_title_ru": "Управление Burst-передачами.",
+      "title_en": "Burst management.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-079",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-079",
+      "source_number": 79,
+      "original_title_ru": "Рандомизация допустимых параметров протокола.",
+      "title_en": "Randomization of permitted protocol parameters.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-080"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Randomize only permitted values. Authentication, parse bounds, protocol invariants, and negotiated minimum policy still apply."
+    },
+    {
+      "id": "VLP-REQ-080",
+      "source_number": 80,
+      "original_title_ru": "Согласованность внешнего поведения с выбранным транспортом.",
+      "title_en": "Consistency of observable behavior with the selected transport.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-069",
+        "VLP-REQ-072",
+        "VLP-REQ-073",
+        "VLP-REQ-074",
+        "VLP-REQ-075",
+        "VLP-REQ-076",
+        "VLP-REQ-077",
+        "VLP-REQ-078",
+        "VLP-REQ-079"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A native UDP format with a similar prefix is not a standards-compliant HTTP/3 carrier. Specify each profile honestly."
+    },
+    {
+      "id": "VLP-REQ-081",
+      "source_number": 81,
+      "original_title_ru": "Защита от пассивного Fingerprinting.",
+      "title_en": "Passive-fingerprinting resistance.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-082",
+        "VLP-REQ-083",
+        "VLP-REQ-084",
+        "VLP-REQ-085",
+        "VLP-REQ-196",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-082",
+      "source_number": 82,
+      "original_title_ru": "Устойчивость к активному Fingerprinting.",
+      "title_en": "Active-fingerprinting resistance.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-083",
+        "VLP-REQ-084",
+        "VLP-REQ-085",
+        "VLP-REQ-196",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-083",
+      "source_number": 83,
+      "original_title_ru": "Устойчивость к Active Probing.",
+      "title_en": "Active-probing resistance.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-082",
+        "VLP-REQ-084",
+        "VLP-REQ-085",
+        "VLP-REQ-196",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-084",
+      "source_number": 84,
+      "original_title_ru": "Анализ распознаваемости с помощью DPI.",
+      "title_en": "DPI detectability analysis.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-082",
+        "VLP-REQ-083",
+        "VLP-REQ-085",
+        "VLP-REQ-196",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-085",
+      "source_number": 85,
+      "original_title_ru": "Анализ статистического распознавания трафика.",
+      "title_en": "Statistical traffic-classification analysis.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-082",
+        "VLP-REQ-083",
+        "VLP-REQ-084",
+        "VLP-REQ-196",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-086",
+      "source_number": 86,
+      "original_title_ru": "Анализ корреляции входящих и исходящих потоков.",
+      "title_en": "Incoming/outgoing traffic correlation analysis.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-129",
+        "VLP-REQ-131"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "State observer placement and capabilities; a successful classifier experiment does not establish global unlinkability."
+    },
+    {
+      "id": "VLP-REQ-087",
+      "source_number": 87,
+      "original_title_ru": "Баланс маскировки, задержки и накладных расходов.",
+      "title_en": "Camouflage, latency, and overhead trade-offs.",
+      "source_category": "TOPIC-05",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-020",
+        "VLP-REQ-030",
+        "VLP-REQ-160",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Count padding, headers, control traffic, and retransmissions in applicable network and resource budgets."
+    },
+    {
+      "id": "VLP-REQ-088",
+      "source_number": 88,
+      "original_title_ru": "Формат заголовков.",
+      "title_en": "Header format.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-007",
+        "VLP-REQ-094",
+        "VLP-REQ-163",
+        "VLP-REQ-189",
+        "VLP-REQ-204"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-089",
+      "source_number": 89,
+      "original_title_ru": "Идентификаторы соединений.",
+      "title_en": "Connection identifiers.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-128",
+        "VLP-REQ-135"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-090",
+      "source_number": 90,
+      "original_title_ru": "Идентификаторы потоков.",
+      "title_en": "Stream identifiers.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-092"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-091",
+      "source_number": 91,
+      "original_title_ru": "Packet Number.",
+      "title_en": "Packet number.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-044",
+        "VLP-REQ-045",
+        "VLP-REQ-046",
+        "VLP-REQ-122"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A packet number is distinct from a stream offset or message ID; define its scope and authenticated interpretation."
+    },
+    {
+      "id": "VLP-REQ-092",
+      "source_number": 92,
+      "original_title_ru": "Sequence Number.",
+      "title_en": "Sequence number.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-090"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Define sequence-number purpose and namespace; do not introduce a redundant counter without a semantic need."
+    },
+    {
+      "id": "VLP-REQ-093",
+      "source_number": 93,
+      "original_title_ru": "Frame Types.",
+      "title_en": "Frame types.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-008",
+        "VLP-REQ-166",
+        "VLP-REQ-170",
+        "VLP-REQ-171"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-094",
+      "source_number": 94,
+      "original_title_ru": "Packet Framing.",
+      "title_en": "Packet framing.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-007",
+        "VLP-REQ-088",
+        "VLP-REQ-163",
+        "VLP-REQ-189",
+        "VLP-REQ-204"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-095",
+      "source_number": 95,
+      "original_title_ru": "Шифрование отдельных фреймов и пакетов.",
+      "title_en": "Frame-level and packet-level encryption.",
+      "source_category": "TOPIC-06",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-049",
+        "VLP-REQ-050",
+        "VLP-REQ-051",
+        "VLP-REQ-109"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Frame-level and packet-level protection are design alternatives or explicitly composed layers, not a requirement for redundant encryption."
+    },
+    {
+      "id": "VLP-REQ-096",
+      "source_number": 96,
+      "original_title_ru": "Механизм подтверждений ACK.",
+      "title_en": "Acknowledgment mechanism.",
+      "source_category": "TOPIC-06",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-021",
+        "VLP-REQ-023",
+        "VLP-REQ-174",
+        "VLP-REQ-180"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Transport acknowledgment does not prove application processing or exactly-once execution across reconnections."
+    },
+    {
+      "id": "VLP-REQ-097",
+      "source_number": 97,
+      "original_title_ru": "Обработка дубликатов.",
+      "title_en": "Duplicate handling.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-062",
+        "VLP-REQ-063",
+        "VLP-REQ-107",
+        "VLP-REQ-108",
+        "VLP-REQ-175",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-098",
+      "source_number": 98,
+      "original_title_ru": "Разделение данных и управляющих сообщений.",
+      "title_en": "Separation of data and control messages.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-099",
+        "VLP-REQ-101",
+        "VLP-REQ-159"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-099",
+      "source_number": 99,
+      "original_title_ru": "Приоритеты потоков.",
+      "title_en": "Stream priorities.",
+      "source_category": "TOPIC-06",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-098",
+        "VLP-REQ-101",
+        "VLP-REQ-159"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A client-provided priority is a request. The enforcing peer determines its allowed class and resource share."
+    },
+    {
+      "id": "VLP-REQ-100",
+      "source_number": 100,
+      "original_title_ru": "Ограничение буферизации.",
+      "title_en": "Buffering limits.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-019",
+        "VLP-REQ-101",
+        "VLP-REQ-181",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-101",
+      "source_number": 101,
+      "original_title_ru": "Backpressure.",
+      "title_en": "Backpressure.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-019",
+        "VLP-REQ-098",
+        "VLP-REQ-099",
+        "VLP-REQ-100",
+        "VLP-REQ-159",
+        "VLP-REQ-181",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-102",
+      "source_number": 102,
+      "original_title_ru": "Передача больших объёмов данных.",
+      "title_en": "Bulk data transfer.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-103",
+        "VLP-REQ-104",
+        "VLP-REQ-155",
+        "VLP-REQ-156",
+        "VLP-REQ-157",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-103",
+      "source_number": 103,
+      "original_title_ru": "Передача небольших сообщений.",
+      "title_en": "Small-message transfer.",
+      "source_category": "TOPIC-06",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-104",
+        "VLP-REQ-155",
+        "VLP-REQ-156",
+        "VLP-REQ-157",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-104",
+      "source_number": 104,
+      "original_title_ru": "Работа с нестабильными соединениями.",
+      "title_en": "Operation over unstable connections.",
+      "source_category": "TOPIC-06",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-103",
+        "VLP-REQ-155",
+        "VLP-REQ-156",
+        "VLP-REQ-157",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-105",
+      "source_number": 105,
+      "original_title_ru": "Threat Model — модель угроз.",
+      "title_en": "Threat model.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-031",
+        "VLP-REQ-186",
+        "VLP-REQ-202",
+        "VLP-REQ-205"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-106",
+      "source_number": 106,
+      "original_title_ru": "Защита от MITM.",
+      "title_en": "Man-in-the-middle resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-061"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-107",
+      "source_number": 107,
+      "original_title_ru": "Replay Protection.",
+      "title_en": "Replay protection.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-062",
+        "VLP-REQ-063",
+        "VLP-REQ-097",
+        "VLP-REQ-108",
+        "VLP-REQ-175",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-108",
+      "source_number": 108,
+      "original_title_ru": "Anti-Replay Window.",
+      "title_en": "Anti-replay window.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-062",
+        "VLP-REQ-063",
+        "VLP-REQ-097",
+        "VLP-REQ-107",
+        "VLP-REQ-175",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-109",
+      "source_number": 109,
+      "original_title_ru": "Защита от подмены пакетов.",
+      "title_en": "Packet-forgery resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-049",
+        "VLP-REQ-050",
+        "VLP-REQ-051",
+        "VLP-REQ-095"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-110",
+      "source_number": 110,
+      "original_title_ru": "Защита от изменения порядка сообщений, если это критично.",
+      "title_en": "Protection of message ordering where required.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-022",
+        "VLP-REQ-176"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Ordering is required only for the negotiated semantics; an unreliable datagram profile must not silently become a reliable stream."
+    },
+    {
+      "id": "VLP-REQ-111",
+      "source_number": 111,
+      "original_title_ru": "Защита от Session Hijacking.",
+      "title_en": "Session-hijacking resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-112",
+      "source_number": 112,
+      "original_title_ru": "Защита от Connection Injection.",
+      "title_en": "Connection-injection resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-113",
+      "source_number": 113,
+      "original_title_ru": "Защита от Downgrade.",
+      "title_en": "Downgrade resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-060",
+        "VLP-REQ-168",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-114",
+      "source_number": 114,
+      "original_title_ru": "Защита от Reflection и Amplification.",
+      "title_en": "Reflection and amplification resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-115",
+        "VLP-REQ-116",
+        "VLP-REQ-117",
+        "VLP-REQ-118",
+        "VLP-REQ-184"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Validate return reachability and bound responses; account for retry and camouflage bytes before authentication."
+    },
+    {
+      "id": "VLP-REQ-115",
+      "source_number": 115,
+      "original_title_ru": "Защита от DoS на уровне протокола.",
+      "title_en": "Protocol-level denial-of-service resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-114",
+        "VLP-REQ-116",
+        "VLP-REQ-117",
+        "VLP-REQ-118",
+        "VLP-REQ-184"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-116",
+      "source_number": 116,
+      "original_title_ru": "Rate Limiting до аутентификации.",
+      "title_en": "Pre-authentication rate limiting.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-114",
+        "VLP-REQ-115",
+        "VLP-REQ-117",
+        "VLP-REQ-118",
+        "VLP-REQ-184"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-117",
+      "source_number": 117,
+      "original_title_ru": "Ограничение расходования CPU и памяти.",
+      "title_en": "CPU and memory limits.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-114",
+        "VLP-REQ-115",
+        "VLP-REQ-116",
+        "VLP-REQ-118",
+        "VLP-REQ-184"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-118",
+      "source_number": 118,
+      "original_title_ru": "Защита от исчерпания состояния сессий.",
+      "title_en": "Session-state exhaustion resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-114",
+        "VLP-REQ-115",
+        "VLP-REQ-116",
+        "VLP-REQ-117",
+        "VLP-REQ-184"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-119",
+      "source_number": 119,
+      "original_title_ru": "Защита от Timing Side Channels.",
+      "title_en": "Timing side-channel resistance.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-120",
+      "source_number": 120,
+      "original_title_ru": "Защита от ошибок криптографической реализации.",
+      "title_en": "Prevention of cryptographic implementation errors.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-121",
+      "source_number": 121,
+      "original_title_ru": "Безопасное поведение при сбоях (Fail Closed).",
+      "title_en": "Fail-closed behavior.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-123",
+        "VLP-REQ-125",
+        "VLP-REQ-178",
+        "VLP-REQ-179",
+        "VLP-REQ-183"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Security-policy failure must not disable authentication. Dropping one unauthenticated forged packet must not let an outsider terminate a valid session."
+    },
+    {
+      "id": "VLP-REQ-122",
+      "source_number": 122,
+      "original_title_ru": "Изоляция контекстов и сессий.",
+      "title_en": "Context and session isolation.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-044",
+        "VLP-REQ-045",
+        "VLP-REQ-046",
+        "VLP-REQ-091"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-123",
+      "source_number": 123,
+      "original_title_ru": "Защита от некорректных и специально сформированных пакетов.",
+      "title_en": "Malformed and adversarial packet handling.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-121",
+        "VLP-REQ-125",
+        "VLP-REQ-178",
+        "VLP-REQ-179",
+        "VLP-REQ-183"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-124",
+      "source_number": 124,
+      "original_title_ru": "Предотвращение утечек через сообщения об ошибках.",
+      "title_en": "Prevention of error-message leakage.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-066",
+        "VLP-REQ-071",
+        "VLP-REQ-127",
+        "VLP-REQ-136"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-125",
+      "source_number": 125,
+      "original_title_ru": "Безопасное восстановление после разрыва соединения.",
+      "title_en": "Safe recovery after disconnection.",
+      "source_category": "TOPIC-07",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-009",
+        "VLP-REQ-064",
+        "VLP-REQ-121",
+        "VLP-REQ-123",
+        "VLP-REQ-139",
+        "VLP-REQ-140",
+        "VLP-REQ-178",
+        "VLP-REQ-179",
+        "VLP-REQ-183"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Recovery must preserve identity and authorization and avoid restoring traffic secrets with lost nonce/replay state."
+    },
+    {
+      "id": "VLP-REQ-126",
+      "source_number": 126,
+      "original_title_ru": "Минимизация открытых метаданных.",
+      "title_en": "Minimization of exposed metadata.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-130",
+        "VLP-REQ-132",
+        "VLP-REQ-133",
+        "VLP-REQ-134",
+        "VLP-REQ-216"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-127",
+      "source_number": 127,
+      "original_title_ru": "Сокрытие идентичности участников там, где это возможно.",
+      "title_en": "Participant identity hiding where feasible.",
+      "source_category": "TOPIC-08",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-066",
+        "VLP-REQ-071",
+        "VLP-REQ-124",
+        "VLP-REQ-136"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Specify identity-disclosure properties for each handshake flight, including future compromise of long-lived keys."
+    },
+    {
+      "id": "VLP-REQ-128",
+      "source_number": 128,
+      "original_title_ru": "Защита идентификаторов соединений от отслеживания.",
+      "title_en": "Reduction of connection-identifier tracking.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-089",
+        "VLP-REQ-135"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Connection IDs route packets; possession of an ID is not authentication. Rotation alone does not remove all linkability."
+    },
+    {
+      "id": "VLP-REQ-129",
+      "source_number": 129,
+      "original_title_ru": "Уменьшение возможностей связывания разных сессий.",
+      "title_en": "Reduction of cross-session linkability.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-086",
+        "VLP-REQ-131"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-130",
+      "source_number": 130,
+      "original_title_ru": "Защита от Traffic Analysis.",
+      "title_en": "Traffic-analysis resistance.",
+      "source_category": "TOPIC-08",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-126",
+        "VLP-REQ-132",
+        "VLP-REQ-133",
+        "VLP-REQ-134",
+        "VLP-REQ-216"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-131",
+      "source_number": 131,
+      "original_title_ru": "Защита от Session Correlation.",
+      "title_en": "Session-correlation resistance.",
+      "source_category": "TOPIC-08",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-086",
+        "VLP-REQ-129"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-132",
+      "source_number": 132,
+      "original_title_ru": "Устойчивость к пассивному наблюдению.",
+      "title_en": "Passive-observation resistance.",
+      "source_category": "TOPIC-08",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-126",
+        "VLP-REQ-130",
+        "VLP-REQ-133",
+        "VLP-REQ-134",
+        "VLP-REQ-216"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-133",
+      "source_number": 133,
+      "original_title_ru": "Управление раскрытием адресов назначения.",
+      "title_en": "Control of destination-address disclosure.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-126",
+        "VLP-REQ-130",
+        "VLP-REQ-132",
+        "VLP-REQ-134",
+        "VLP-REQ-216"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-134",
+      "source_number": 134,
+      "original_title_ru": "Политика обработки DNS, если протокол передаёт имена.",
+      "title_en": "DNS handling policy when names are carried.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-126",
+        "VLP-REQ-130",
+        "VLP-REQ-132",
+        "VLP-REQ-133",
+        "VLP-REQ-216"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "If names are carried, decide who resolves them, trust and egress policy, destination disclosure, and handling of address changes."
+    },
+    {
+      "id": "VLP-REQ-135",
+      "source_number": 135,
+      "original_title_ru": "Минимизация долговременных идентификаторов.",
+      "title_en": "Minimization of long-lived identifiers.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-089",
+        "VLP-REQ-128"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-136",
+      "source_number": 136,
+      "original_title_ru": "Устранение утечек через управляющие пакеты.",
+      "title_en": "Prevention of control-packet leakage.",
+      "source_category": "TOPIC-08",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-066",
+        "VLP-REQ-071",
+        "VLP-REQ-124",
+        "VLP-REQ-127"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-137",
+      "source_number": 137,
+      "original_title_ru": "Создание соединения.",
+      "title_en": "Connection creation.",
+      "source_category": "TOPIC-09",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-065",
+        "VLP-REQ-068",
+        "VLP-REQ-149",
+        "VLP-REQ-188",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-138",
+      "source_number": 138,
+      "original_title_ru": "Аутентификация нового соединения.",
+      "title_en": "Authentication of a new connection.",
+      "source_category": "TOPIC-09",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-055",
+        "VLP-REQ-056",
+        "VLP-REQ-057",
+        "VLP-REQ-067",
+        "VLP-REQ-207"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-139",
+      "source_number": 139,
+      "original_title_ru": "Повторное подключение.",
+      "title_en": "Reconnection.",
+      "source_category": "TOPIC-09",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-009",
+        "VLP-REQ-064",
+        "VLP-REQ-125",
+        "VLP-REQ-140"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-140",
+      "source_number": 140,
+      "original_title_ru": "Восстановление сессии.",
+      "title_en": "Session recovery.",
+      "source_category": "TOPIC-09",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-009",
+        "VLP-REQ-064",
+        "VLP-REQ-125",
+        "VLP-REQ-139"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Distinguish application recovery, reconnection, transport resumption, and restore from a local snapshot."
+    },
+    {
+      "id": "VLP-REQ-141",
+      "source_number": 141,
+      "original_title_ru": "Тайм-ауты неактивности.",
+      "title_en": "Idle timeouts.",
+      "source_category": "TOPIC-09",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-029",
+        "VLP-REQ-142"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-142",
+      "source_number": 142,
+      "original_title_ru": "Heartbeat / Keepalive.",
+      "title_en": "Heartbeat and keepalive.",
+      "source_category": "TOPIC-09",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-029",
+        "VLP-REQ-141"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-143",
+      "source_number": 143,
+      "original_title_ru": "Обнаружение смены IP-адреса.",
+      "title_en": "IP-address change detection.",
+      "source_category": "TOPIC-09",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-026",
+        "VLP-REQ-144",
+        "VLP-REQ-145"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-144",
+      "source_number": 144,
+      "original_title_ru": "Смена сетевого маршрута.",
+      "title_en": "Network-path change.",
+      "source_category": "TOPIC-09",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-026",
+        "VLP-REQ-143",
+        "VLP-REQ-145"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-145",
+      "source_number": 145,
+      "original_title_ru": "Защита от подмены адреса при миграции.",
+      "title_en": "Address-spoofing resistance during migration.",
+      "source_category": "TOPIC-09",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-026",
+        "VLP-REQ-143",
+        "VLP-REQ-144"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-146",
+      "source_number": 146,
+      "original_title_ru": "Завершение соединения.",
+      "title_en": "Connection termination.",
+      "source_category": "TOPIC-09",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-147",
+        "VLP-REQ-148"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-147",
+      "source_number": 147,
+      "original_title_ru": "Обработка одностороннего разрыва.",
+      "title_en": "One-sided disconnection handling.",
+      "source_category": "TOPIC-09",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-146",
+        "VLP-REQ-148"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-148",
+      "source_number": 148,
+      "original_title_ru": "Обработка потери пакетов и недоступности узла.",
+      "title_en": "Packet loss and peer unavailability handling.",
+      "source_category": "TOPIC-09",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-146",
+        "VLP-REQ-147"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-149",
+      "source_number": 149,
+      "original_title_ru": "Минимизация Handshake RTT.",
+      "title_en": "Handshake round-trip minimization.",
+      "source_category": "TOPIC-10",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-065",
+        "VLP-REQ-068",
+        "VLP-REQ-137",
+        "VLP-REQ-188",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Measure cryptographic establishment separately from channel acceptance and application readiness."
+    },
+    {
+      "id": "VLP-REQ-150",
+      "source_number": 150,
+      "original_title_ru": "Минимизация Packet Overhead.",
+      "title_en": "Packet overhead minimization.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-024",
+        "VLP-REQ-025"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-151",
+      "source_number": 151,
+      "original_title_ru": "Минимизация криптографических накладных расходов.",
+      "title_en": "Cryptographic overhead minimization.",
+      "source_category": "TOPIC-10",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-161",
+        "VLP-REQ-199",
+        "VLP-REQ-219"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-152",
+      "source_number": 152,
+      "original_title_ru": "Оптимизация обработки пакетов.",
+      "title_en": "Packet-processing optimization.",
+      "source_category": "TOPIC-10",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-153",
+        "VLP-REQ-154",
+        "VLP-REQ-162",
+        "VLP-REQ-198"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-153",
+      "source_number": 153,
+      "original_title_ru": "Zero-Copy как возможность реализации.",
+      "title_en": "Zero-copy as an implementation option.",
+      "source_category": "TOPIC-10",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-152",
+        "VLP-REQ-154",
+        "VLP-REQ-162",
+        "VLP-REQ-198"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Zero-copy is an implementation option, not a wire-level security or correctness guarantee."
+    },
+    {
+      "id": "VLP-REQ-154",
+      "source_number": 154,
+      "original_title_ru": "Работа на слабом оборудовании.",
+      "title_en": "Operation on resource-constrained hardware.",
+      "source_category": "TOPIC-10",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-152",
+        "VLP-REQ-153",
+        "VLP-REQ-162",
+        "VLP-REQ-198"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-155",
+      "source_number": 155,
+      "original_title_ru": "Работа в мобильных сетях.",
+      "title_en": "Operation on mobile networks.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-103",
+        "VLP-REQ-104",
+        "VLP-REQ-156",
+        "VLP-REQ-157",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-156",
+      "source_number": 156,
+      "original_title_ru": "Работа при высокой задержке.",
+      "title_en": "Operation on high-latency networks.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-103",
+        "VLP-REQ-104",
+        "VLP-REQ-155",
+        "VLP-REQ-157",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-157",
+      "source_number": 157,
+      "original_title_ru": "Работа при потере пакетов.",
+      "title_en": "Operation under packet loss.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-103",
+        "VLP-REQ-104",
+        "VLP-REQ-155",
+        "VLP-REQ-156",
+        "VLP-REQ-158"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-158",
+      "source_number": 158,
+      "original_title_ru": "Работа в сетях с низкой пропускной способностью.",
+      "title_en": "Operation on low-bandwidth networks.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-102",
+        "VLP-REQ-103",
+        "VLP-REQ-104",
+        "VLP-REQ-155",
+        "VLP-REQ-156",
+        "VLP-REQ-157"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-159",
+      "source_number": 159,
+      "original_title_ru": "Оптимизация мультиплексирования.",
+      "title_en": "Multiplexing optimization.",
+      "source_category": "TOPIC-10",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-098",
+        "VLP-REQ-099",
+        "VLP-REQ-101"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-160",
+      "source_number": 160,
+      "original_title_ru": "Справедливость распределения пропускной способности.",
+      "title_en": "Bandwidth-allocation fairness.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-020",
+        "VLP-REQ-030",
+        "VLP-REQ-087",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-161",
+      "source_number": 161,
+      "original_title_ru": "Энергозатраты протокола.",
+      "title_en": "Protocol energy cost.",
+      "source_category": "TOPIC-10",
+      "primary_core": "TRANSPORT",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-151",
+        "VLP-REQ-199",
+        "VLP-REQ-219"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-162",
+      "source_number": 162,
+      "original_title_ru": "Масштабируемость по количеству соединений.",
+      "title_en": "Connection-count scalability.",
+      "source_category": "TOPIC-10",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-152",
+        "VLP-REQ-153",
+        "VLP-REQ-154",
+        "VLP-REQ-198"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-163",
+      "source_number": 163,
+      "original_title_ru": "Независимое версионирование Wire Format.",
+      "title_en": "Independent wire-format versioning.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-007",
+        "VLP-REQ-010",
+        "VLP-REQ-011",
+        "VLP-REQ-088",
+        "VLP-REQ-094",
+        "VLP-REQ-164",
+        "VLP-REQ-189",
+        "VLP-REQ-204"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "A separate wire-version scheme is a candidate; minimize independent version axes and bind compatibility negotiation."
+    },
+    {
+      "id": "VLP-REQ-164",
+      "source_number": 164,
+      "original_title_ru": "Обратная совместимость.",
+      "title_en": "Backward compatibility.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-010",
+        "VLP-REQ-011",
+        "VLP-REQ-163"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Compatibility must not keep a prohibited security mode usable after retirement."
+    },
+    {
+      "id": "VLP-REQ-165",
+      "source_number": 165,
+      "original_title_ru": "Расширения протокола.",
+      "title_en": "Protocol extensions.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-166",
+      "source_number": 166,
+      "original_title_ru": "Регистрация типов сообщений.",
+      "title_en": "Message-type registration.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-008",
+        "VLP-REQ-093",
+        "VLP-REQ-170",
+        "VLP-REQ-171"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-167",
+      "source_number": 167,
+      "original_title_ru": "Согласование расширений.",
+      "title_en": "Extension negotiation.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-012",
+        "VLP-REQ-058",
+        "VLP-REQ-059",
+        "VLP-REQ-214"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-168",
+      "source_number": 168,
+      "original_title_ru": "Криптографическая гибкость без небезопасного Downgrade.",
+      "title_en": "Cryptographic agility without unsafe downgrade.",
+      "source_category": "TOPIC-11",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-060",
+        "VLP-REQ-113",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Algorithm agility requires authenticated negotiation and a clear minimum policy; it is not trial-and-error fallback."
+    },
+    {
+      "id": "VLP-REQ-169",
+      "source_number": 169,
+      "original_title_ru": "Удаление устаревших алгоритмов.",
+      "title_en": "Removal of obsolete algorithms.",
+      "source_category": "TOPIC-11",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SCOPE_DECISION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-170",
+      "source_number": 170,
+      "original_title_ru": "Зарезервированные поля и коды.",
+      "title_en": "Reserved fields and code points.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-008",
+        "VLP-REQ-093",
+        "VLP-REQ-166",
+        "VLP-REQ-171"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-171",
+      "source_number": 171,
+      "original_title_ru": "Обработка неизвестных типов сообщений.",
+      "title_en": "Unknown-message handling.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-008",
+        "VLP-REQ-093",
+        "VLP-REQ-166",
+        "VLP-REQ-170"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Differentiate ignorable extensions from mandatory unknown semantics and bound parsing work."
+    },
+    {
+      "id": "VLP-REQ-172",
+      "source_number": 172,
+      "original_title_ru": "Формальное описание состояний.",
+      "title_en": "Formal state description.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-006",
+        "VLP-REQ-190",
+        "VLP-REQ-211"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-173",
+      "source_number": 173,
+      "original_title_ru": "Совместимость независимых реализаций.",
+      "title_en": "Compatibility of independent implementations.",
+      "source_category": "TOPIC-11",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-194",
+        "VLP-REQ-218"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-174",
+      "source_number": 174,
+      "original_title_ru": "Корректность при потере пакетов.",
+      "title_en": "Correctness under packet loss.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-021",
+        "VLP-REQ-023",
+        "VLP-REQ-096",
+        "VLP-REQ-180"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-175",
+      "source_number": 175,
+      "original_title_ru": "Корректность при дублировании пакетов.",
+      "title_en": "Correctness under packet duplication.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-062",
+        "VLP-REQ-063",
+        "VLP-REQ-097",
+        "VLP-REQ-107",
+        "VLP-REQ-108",
+        "VLP-REQ-191"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-176",
+      "source_number": 176,
+      "original_title_ru": "Корректность при изменении порядка.",
+      "title_en": "Correctness under reordering.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-022",
+        "VLP-REQ-110"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-177",
+      "source_number": 177,
+      "original_title_ru": "Корректность при частичной доставке.",
+      "title_en": "Correctness under partial delivery.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-178",
+      "source_number": 178,
+      "original_title_ru": "Обработка повреждённых сообщений.",
+      "title_en": "Corrupted-message handling.",
+      "source_category": "TOPIC-12",
+      "primary_core": "SECURITY",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-121",
+        "VLP-REQ-123",
+        "VLP-REQ-125",
+        "VLP-REQ-179",
+        "VLP-REQ-183"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-179",
+      "source_number": 179,
+      "original_title_ru": "Восстановление после сетевого сбоя.",
+      "title_en": "Recovery after network failure.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-121",
+        "VLP-REQ-123",
+        "VLP-REQ-125",
+        "VLP-REQ-178",
+        "VLP-REQ-183"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-180",
+      "source_number": 180,
+      "original_title_ru": "Защита от бесконечных циклов повторной передачи.",
+      "title_en": "Prevention of unbounded retransmission loops.",
+      "source_category": "TOPIC-12",
+      "primary_core": "TRANSPORT",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-021",
+        "VLP-REQ-023",
+        "VLP-REQ-096",
+        "VLP-REQ-174"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-181",
+      "source_number": 181,
+      "original_title_ru": "Ограничение очередей.",
+      "title_en": "Queue limits.",
+      "source_category": "TOPIC-12",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-019",
+        "VLP-REQ-100",
+        "VLP-REQ-101",
+        "VLP-REQ-212"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-182",
+      "source_number": 182,
+      "original_title_ru": "Контроль переполнения буферов.",
+      "title_en": "Buffer-overflow control.",
+      "source_category": "TOPIC-12",
+      "primary_core": "SECURITY",
+      "planning_track": "IMPLEMENTATION_CONSIDERATION",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-183",
+      "source_number": 183,
+      "original_title_ru": "Предсказуемая обработка ошибок.",
+      "title_en": "Predictable error handling.",
+      "source_category": "TOPIC-12",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-121",
+        "VLP-REQ-123",
+        "VLP-REQ-125",
+        "VLP-REQ-178",
+        "VLP-REQ-179"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-184",
+      "source_number": 184,
+      "original_title_ru": "Устойчивость при высокой нагрузке.",
+      "title_en": "Resilience under high load.",
+      "source_category": "TOPIC-12",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "FOUNDATION_RESEARCH",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-114",
+        "VLP-REQ-115",
+        "VLP-REQ-116",
+        "VLP-REQ-117",
+        "VLP-REQ-118"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-185",
+      "source_number": 185,
+      "original_title_ru": "Сравнение с VLESS, Shadowsocks, Hysteria 2, WireGuard, AmneziaWG, QUIC, TLS 1.3 и Noise.",
+      "title_en": "Comparison with VLESS, Shadowsocks, Hysteria 2, WireGuard, AmneziaWG, QUIC, TLS 1.3, and Noise.",
+      "source_category": "TOPIC-13",
+      "primary_core": "SECURITY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Compare like-for-like functions and configurations: proxy protocols, transports, cryptographic frameworks, and applications are different layers."
+    },
+    {
+      "id": "VLP-REQ-186",
+      "source_number": 186,
+      "original_title_ru": "Формальная модель угроз.",
+      "title_en": "Formal threat model.",
+      "source_category": "TOPIC-13",
+      "primary_core": "SECURITY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-031",
+        "VLP-REQ-105",
+        "VLP-REQ-202",
+        "VLP-REQ-205"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-187",
+      "source_number": 187,
+      "original_title_ru": "Криптографический анализ.",
+      "title_en": "Cryptographic analysis.",
+      "source_category": "TOPIC-13",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-195",
+        "VLP-REQ-200",
+        "VLP-REQ-217",
+        "VLP-REQ-220"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-188",
+      "source_number": 188,
+      "original_title_ru": "Формальная проверка Handshake.",
+      "title_en": "Formal handshake verification.",
+      "source_category": "TOPIC-13",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-065",
+        "VLP-REQ-068",
+        "VLP-REQ-137",
+        "VLP-REQ-149",
+        "VLP-REQ-206"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-189",
+      "source_number": 189,
+      "original_title_ru": "Анализ безопасности Wire Format.",
+      "title_en": "Wire-format security analysis.",
+      "source_category": "TOPIC-13",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-007",
+        "VLP-REQ-088",
+        "VLP-REQ-094",
+        "VLP-REQ-163",
+        "VLP-REQ-204"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-190",
+      "source_number": 190,
+      "original_title_ru": "Проверка машин состояний.",
+      "title_en": "State-machine verification.",
+      "source_category": "TOPIC-13",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-006",
+        "VLP-REQ-172",
+        "VLP-REQ-211"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-191",
+      "source_number": 191,
+      "original_title_ru": "Тестирование на Replay и Downgrade.",
+      "title_en": "Replay and downgrade testing.",
+      "source_category": "TOPIC-13",
+      "primary_core": "SECURITY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-060",
+        "VLP-REQ-062",
+        "VLP-REQ-063",
+        "VLP-REQ-097",
+        "VLP-REQ-107",
+        "VLP-REQ-108",
+        "VLP-REQ-113",
+        "VLP-REQ-168",
+        "VLP-REQ-175"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-192",
+      "source_number": 192,
+      "original_title_ru": "Fuzz Testing парсера пакетов.",
+      "title_en": "Packet-parser fuzz testing.",
+      "source_category": "TOPIC-13",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-193",
+      "source_number": 193,
+      "original_title_ru": "Property-Based Testing.",
+      "title_en": "Property-based testing.",
+      "source_category": "TOPIC-13",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-194",
+      "source_number": 194,
+      "original_title_ru": "Interoperability Testing.",
+      "title_en": "Interoperability testing.",
+      "source_category": "TOPIC-13",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-173",
+        "VLP-REQ-218"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-195",
+      "source_number": 195,
+      "original_title_ru": "Наборы тестовых векторов.",
+      "title_en": "Test-vector sets.",
+      "source_category": "TOPIC-13",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-187",
+        "VLP-REQ-200",
+        "VLP-REQ-217",
+        "VLP-REQ-220"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Later vectors must be synthetic, versioned, and cover negative cases; a vector file is not a completed independent audit."
+    },
+    {
+      "id": "VLP-REQ-196",
+      "source_number": 196,
+      "original_title_ru": "Анализ устойчивости к DPI.",
+      "title_en": "DPI-resistance analysis.",
+      "source_category": "TOPIC-13",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-082",
+        "VLP-REQ-083",
+        "VLP-REQ-084",
+        "VLP-REQ-085",
+        "VLP-REQ-197"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-197",
+      "source_number": 197,
+      "original_title_ru": "Анализ обнаруживаемости сетевого поведения.",
+      "title_en": "Network-behavior detectability analysis.",
+      "source_category": "TOPIC-13",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-081",
+        "VLP-REQ-082",
+        "VLP-REQ-083",
+        "VLP-REQ-084",
+        "VLP-REQ-085",
+        "VLP-REQ-196"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-198",
+      "source_number": 198,
+      "original_title_ru": "Нагрузочные испытания.",
+      "title_en": "Load testing.",
+      "source_category": "TOPIC-13",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-152",
+        "VLP-REQ-153",
+        "VLP-REQ-154",
+        "VLP-REQ-162"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-199",
+      "source_number": 199,
+      "original_title_ru": "Измерение задержки, скорости и потерь.",
+      "title_en": "Latency, throughput, and loss measurement.",
+      "source_category": "TOPIC-13",
+      "primary_core": "TRANSPORT",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-151",
+        "VLP-REQ-161",
+        "VLP-REQ-219"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-200",
+      "source_number": 200,
+      "original_title_ru": "Анализ безопасности независимыми специалистами.",
+      "title_en": "Independent specialist security analysis.",
+      "source_category": "TOPIC-13",
+      "primary_core": "SECURITY",
+      "planning_track": "VALIDATION_WORK",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-187",
+        "VLP-REQ-195",
+        "VLP-REQ-217",
+        "VLP-REQ-220"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Record reviewer identity, independence, scope, revision, findings, and limitations. Author self-review is not an independent audit."
+    },
+    {
+      "id": "VLP-REQ-201",
+      "source_number": 201,
+      "original_title_ru": "Architecture Specification.",
+      "title_en": "Architecture specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-202",
+      "source_number": 202,
+      "original_title_ru": "Threat Model.",
+      "title_en": "Threat model document.",
+      "source_category": "TOPIC-14",
+      "primary_core": "SECURITY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-031",
+        "VLP-REQ-105",
+        "VLP-REQ-186",
+        "VLP-REQ-205"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-203",
+      "source_number": 203,
+      "original_title_ru": "Transport Specification.",
+      "title_en": "Transport specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-204",
+      "source_number": 204,
+      "original_title_ru": "Packet Wire Format.",
+      "title_en": "Packet wire-format specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-007",
+        "VLP-REQ-088",
+        "VLP-REQ-094",
+        "VLP-REQ-163",
+        "VLP-REQ-189"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-205",
+      "source_number": 205,
+      "original_title_ru": "Cryptographic Specification.",
+      "title_en": "Cryptographic specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-031",
+        "VLP-REQ-105",
+        "VLP-REQ-186",
+        "VLP-REQ-202"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-206",
+      "source_number": 206,
+      "original_title_ru": "Handshake Specification.",
+      "title_en": "Handshake specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-053",
+        "VLP-REQ-065",
+        "VLP-REQ-068",
+        "VLP-REQ-137",
+        "VLP-REQ-149",
+        "VLP-REQ-188"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-207",
+      "source_number": 207,
+      "original_title_ru": "Authentication Specification.",
+      "title_en": "Authentication specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-054",
+        "VLP-REQ-055",
+        "VLP-REQ-056",
+        "VLP-REQ-057",
+        "VLP-REQ-067",
+        "VLP-REQ-138"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-208",
+      "source_number": 208,
+      "original_title_ru": "Key Management Specification.",
+      "title_en": "Key-management specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-209",
+      "source_number": 209,
+      "original_title_ru": "Camouflage Specification.",
+      "title_en": "Camouflage specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "CAMOUFLAGE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-210",
+      "source_number": 210,
+      "original_title_ru": "Data Plane Specification.",
+      "title_en": "Data-plane specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "DATA_PLANE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-211",
+      "source_number": 211,
+      "original_title_ru": "Connection State Machine.",
+      "title_en": "Connection state-machine specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-006",
+        "VLP-REQ-172",
+        "VLP-REQ-190"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-212",
+      "source_number": 212,
+      "original_title_ru": "Congestion & Flow Control Specification.",
+      "title_en": "Congestion and flow-control specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-019",
+        "VLP-REQ-020",
+        "VLP-REQ-030",
+        "VLP-REQ-087",
+        "VLP-REQ-100",
+        "VLP-REQ-101",
+        "VLP-REQ-160",
+        "VLP-REQ-181"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-213",
+      "source_number": 213,
+      "original_title_ru": "Error Handling Specification.",
+      "title_en": "Error-handling specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-214",
+      "source_number": 214,
+      "original_title_ru": "Version Negotiation Specification.",
+      "title_en": "Version-negotiation specification.",
+      "source_category": "TOPIC-14",
+      "primary_core": "HANDSHAKE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-012",
+        "VLP-REQ-058",
+        "VLP-REQ-059",
+        "VLP-REQ-167"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-215",
+      "source_number": 215,
+      "original_title_ru": "Security Considerations.",
+      "title_en": "Security considerations.",
+      "source_category": "TOPIC-14",
+      "primary_core": "SECURITY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-216",
+      "source_number": 216,
+      "original_title_ru": "Privacy Considerations.",
+      "title_en": "Privacy considerations.",
+      "source_category": "TOPIC-14",
+      "primary_core": "SECURITY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-126",
+        "VLP-REQ-130",
+        "VLP-REQ-132",
+        "VLP-REQ-133",
+        "VLP-REQ-134"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-217",
+      "source_number": 217,
+      "original_title_ru": "Protocol Test Vectors.",
+      "title_en": "Protocol test vectors.",
+      "source_category": "TOPIC-14",
+      "primary_core": "CRYPTOGRAPHY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-187",
+        "VLP-REQ-195",
+        "VLP-REQ-200",
+        "VLP-REQ-220"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Only publish actual generated or independently derived vectors after the applicable approved work; no placeholder output may look like a passed vector."
+    },
+    {
+      "id": "VLP-REQ-218",
+      "source_number": 218,
+      "original_title_ru": "Interoperability Requirements.",
+      "title_en": "Interoperability requirements.",
+      "source_category": "TOPIC-14",
+      "primary_core": "PROTOCOL_CORE",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-173",
+        "VLP-REQ-194"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    },
+    {
+      "id": "VLP-REQ-219",
+      "source_number": 219,
+      "original_title_ru": "Performance Benchmarks.",
+      "title_en": "Performance benchmarks.",
+      "source_category": "TOPIC-14",
+      "primary_core": "TRANSPORT",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-151",
+        "VLP-REQ-161",
+        "VLP-REQ-199"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002"
+      ],
+      "decision_ref": null,
+      "evidence_refs": [],
+      "clarification": "Publish reproducible conditions, baselines, useful throughput, latency percentiles, overhead, and uncertainty; no benchmark has run at this stage."
+    },
+    {
+      "id": "VLP-REQ-220",
+      "source_number": 220,
+      "original_title_ru": "Security Audit Requirements.",
+      "title_en": "Security-audit requirements.",
+      "source_category": "TOPIC-14",
+      "primary_core": "SECURITY",
+      "planning_track": "SPECIFICATION_DELIVERABLE",
+      "status": "OPEN",
+      "related_requirements": [
+        "VLP-REQ-187",
+        "VLP-REQ-195",
+        "VLP-REQ-200",
+        "VLP-REQ-217"
+      ],
+      "candidate_specification_coverage": [
+        "VLP-0001",
+        "VLP-0002",
+        "VLP-0003"
+      ],
+      "decision_ref": null,
+      "evidence_refs": []
+    }
+  ]
+}

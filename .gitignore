@@ -1,0 +1,21 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local secrets and captures are never research evidence for publication
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.pcap
+*.pcapng
+
+# Local analysis output
+.cache/
+__pycache__/
+*.pyc
